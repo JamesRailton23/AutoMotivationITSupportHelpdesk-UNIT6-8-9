@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AutoMotivationITSupportHelpdeskDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GeneralEmployeeAccount">
+          <Key>
+            <PropertyRef Name="GeneralEmployeeID" />
+          </Key>
+          <Property Name="GeneralEmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GeneralEmployeeFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GeneralEmployeeLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GeneralEmployeeUsername" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GeneralEmployeePassword" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GeneralEmployeeEmail" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GeneralEmployeePhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccountCreationTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ITSupportTechnicianAccount">
+          <Key>
+            <PropertyRef Name="ITSupportTechnicianID" />
+          </Key>
+          <Property Name="ITSupportTechnicianID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ITSupportTechnicianFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITSupportTechnicianLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITSupportTechnicianUsername" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITSupportTechnicianPassword" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ITSupportTechnicianEmail" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ITSupportTechnicianPhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITSupportTechnicianSpecialty" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccountCreationTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ITSupportTicket">
+          <Key>
+            <PropertyRef Name="ITSupportTicketID" />
+          </Key>
+          <Property Name="ITSupportTicketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GeneralEmployeeID" Type="int" />
+          <Property Name="ITSupportTechnicianID" Type="int" />
+          <Property Name="ITSupportTicketPriority" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITSupportTicketCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ITSupportTicketSubject" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ITSupportTicketDescription" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ITSupportTicketCreationTime" Type="datetime" Nullable="false" />
+          <Property Name="ITSupportTicketComments" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ManagerAccount">
+          <Key>
+            <PropertyRef Name="ManagerID" />
+          </Key>
+          <Property Name="ManagerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ManagerFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ManagerLastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ManagerUsername" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ManagerPassword" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ManagerEmail" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ManagerPhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccountCreationTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ITSupportTicket_To_GeneralEmployeeAccount">
+          <End Role="GeneralEmployeeAccount" Type="Self.GeneralEmployeeAccount" Multiplicity="0..1" />
+          <End Role="ITSupportTicket" Type="Self.ITSupportTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GeneralEmployeeAccount">
+              <PropertyRef Name="GeneralEmployeeID" />
+            </Principal>
+            <Dependent Role="ITSupportTicket">
+              <PropertyRef Name="GeneralEmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITSupportTicket_To_ITSupportTechnicianAccount">
+          <End Role="ITSupportTechnicianAccount" Type="Self.ITSupportTechnicianAccount" Multiplicity="0..1" />
+          <End Role="ITSupportTicket" Type="Self.ITSupportTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITSupportTechnicianAccount">
+              <PropertyRef Name="ITSupportTechnicianID" />
+            </Principal>
+            <Dependent Role="ITSupportTicket">
+              <PropertyRef Name="ITSupportTechnicianID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AutoMotivationITSupportHelpdeskDatabaseModelStoreContainer">
+          <EntitySet Name="GeneralEmployeeAccount" EntityType="Self.GeneralEmployeeAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITSupportTechnicianAccount" EntityType="Self.ITSupportTechnicianAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITSupportTicket" EntityType="Self.ITSupportTicket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ManagerAccount" EntityType="Self.ManagerAccount" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ITSupportTicket_To_GeneralEmployeeAccount" Association="Self.FK_ITSupportTicket_To_GeneralEmployeeAccount">
+            <End Role="GeneralEmployeeAccount" EntitySet="GeneralEmployeeAccount" />
+            <End Role="ITSupportTicket" EntitySet="ITSupportTicket" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITSupportTicket_To_ITSupportTechnicianAccount" Association="Self.FK_ITSupportTicket_To_ITSupportTechnicianAccount">
+            <End Role="ITSupportTechnicianAccount" EntitySet="ITSupportTechnicianAccount" />
+            <End Role="ITSupportTicket" EntitySet="ITSupportTicket" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AutoMotivationITSupportHelpdeskDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GeneralEmployeeAccount">
+          <Key>
+            <PropertyRef Name="GeneralEmployeeID" />
+          </Key>
+          <Property Name="GeneralEmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GeneralEmployeeFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GeneralEmployeeLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GeneralEmployeeUsername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GeneralEmployeePassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GeneralEmployeeEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GeneralEmployeePhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountCreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ITSupportTickets" Relationship="Self.FK_ITSupportTicket_To_GeneralEmployeeAccount" FromRole="GeneralEmployeeAccount" ToRole="ITSupportTicket" />
+        </EntityType>
+        <EntityType Name="ITSupportTechnicianAccount">
+          <Key>
+            <PropertyRef Name="ITSupportTechnicianID" />
+          </Key>
+          <Property Name="ITSupportTechnicianID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ITSupportTechnicianFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTechnicianLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTechnicianUsername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTechnicianPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTechnicianEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTechnicianPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTechnicianSpecialty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountCreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ITSupportTickets" Relationship="Self.FK_ITSupportTicket_To_ITSupportTechnicianAccount" FromRole="ITSupportTechnicianAccount" ToRole="ITSupportTicket" />
+        </EntityType>
+        <EntityType Name="ITSupportTicket">
+          <Key>
+            <PropertyRef Name="ITSupportTicketID" />
+          </Key>
+          <Property Name="ITSupportTicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GeneralEmployeeID" Type="Int32" />
+          <Property Name="ITSupportTechnicianID" Type="Int32" />
+          <Property Name="ITSupportTicketPriority" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTicketCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTicketSubject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTicketDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ITSupportTicketCreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ITSupportTicketComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GeneralEmployeeAccount" Relationship="Self.FK_ITSupportTicket_To_GeneralEmployeeAccount" FromRole="ITSupportTicket" ToRole="GeneralEmployeeAccount" />
+          <NavigationProperty Name="ITSupportTechnicianAccount" Relationship="Self.FK_ITSupportTicket_To_ITSupportTechnicianAccount" FromRole="ITSupportTicket" ToRole="ITSupportTechnicianAccount" />
+        </EntityType>
+        <EntityType Name="ManagerAccount">
+          <Key>
+            <PropertyRef Name="ManagerID" />
+          </Key>
+          <Property Name="ManagerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ManagerFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ManagerLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ManagerUsername" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ManagerPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ManagerEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ManagerPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AccountCreationTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <Association Name="FK_ITSupportTicket_To_GeneralEmployeeAccount">
+          <End Role="GeneralEmployeeAccount" Type="Self.GeneralEmployeeAccount" Multiplicity="0..1" />
+          <End Role="ITSupportTicket" Type="Self.ITSupportTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GeneralEmployeeAccount">
+              <PropertyRef Name="GeneralEmployeeID" />
+            </Principal>
+            <Dependent Role="ITSupportTicket">
+              <PropertyRef Name="GeneralEmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITSupportTicket_To_ITSupportTechnicianAccount">
+          <End Role="ITSupportTechnicianAccount" Type="Self.ITSupportTechnicianAccount" Multiplicity="0..1" />
+          <End Role="ITSupportTicket" Type="Self.ITSupportTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITSupportTechnicianAccount">
+              <PropertyRef Name="ITSupportTechnicianID" />
+            </Principal>
+            <Dependent Role="ITSupportTicket">
+              <PropertyRef Name="ITSupportTechnicianID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AutoMotivationITSupportHelpdeskDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GeneralEmployeeAccounts" EntityType="Self.GeneralEmployeeAccount" />
+          <EntitySet Name="ITSupportTechnicianAccounts" EntityType="Self.ITSupportTechnicianAccount" />
+          <EntitySet Name="ITSupportTickets" EntityType="Self.ITSupportTicket" />
+          <EntitySet Name="ManagerAccounts" EntityType="Self.ManagerAccount" />
+          <AssociationSet Name="FK_ITSupportTicket_To_GeneralEmployeeAccount" Association="Self.FK_ITSupportTicket_To_GeneralEmployeeAccount">
+            <End Role="GeneralEmployeeAccount" EntitySet="GeneralEmployeeAccounts" />
+            <End Role="ITSupportTicket" EntitySet="ITSupportTickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITSupportTicket_To_ITSupportTechnicianAccount" Association="Self.FK_ITSupportTicket_To_ITSupportTechnicianAccount">
+            <End Role="ITSupportTechnicianAccount" EntitySet="ITSupportTechnicianAccounts" />
+            <End Role="ITSupportTicket" EntitySet="ITSupportTickets" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AutoMotivationITSupportHelpdeskDatabaseModelStoreContainer" CdmEntityContainer="AutoMotivationITSupportHelpdeskDatabaseEntities">
+          <EntitySetMapping Name="GeneralEmployeeAccounts">
+            <EntityTypeMapping TypeName="AutoMotivationITSupportHelpdeskDatabaseModel.GeneralEmployeeAccount">
+              <MappingFragment StoreEntitySet="GeneralEmployeeAccount">
+                <ScalarProperty Name="GeneralEmployeeID" ColumnName="GeneralEmployeeID" />
+                <ScalarProperty Name="GeneralEmployeeFirstName" ColumnName="GeneralEmployeeFirstName" />
+                <ScalarProperty Name="GeneralEmployeeLastName" ColumnName="GeneralEmployeeLastName" />
+                <ScalarProperty Name="GeneralEmployeeUsername" ColumnName="GeneralEmployeeUsername" />
+                <ScalarProperty Name="GeneralEmployeePassword" ColumnName="GeneralEmployeePassword" />
+                <ScalarProperty Name="GeneralEmployeeEmail" ColumnName="GeneralEmployeeEmail" />
+                <ScalarProperty Name="GeneralEmployeePhoneNumber" ColumnName="GeneralEmployeePhoneNumber" />
+                <ScalarProperty Name="AccountCreationTime" ColumnName="AccountCreationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITSupportTechnicianAccounts">
+            <EntityTypeMapping TypeName="AutoMotivationITSupportHelpdeskDatabaseModel.ITSupportTechnicianAccount">
+              <MappingFragment StoreEntitySet="ITSupportTechnicianAccount">
+                <ScalarProperty Name="ITSupportTechnicianID" ColumnName="ITSupportTechnicianID" />
+                <ScalarProperty Name="ITSupportTechnicianFirstName" ColumnName="ITSupportTechnicianFirstName" />
+                <ScalarProperty Name="ITSupportTechnicianLastName" ColumnName="ITSupportTechnicianLastName" />
+                <ScalarProperty Name="ITSupportTechnicianUsername" ColumnName="ITSupportTechnicianUsername" />
+                <ScalarProperty Name="ITSupportTechnicianPassword" ColumnName="ITSupportTechnicianPassword" />
+                <ScalarProperty Name="ITSupportTechnicianEmail" ColumnName="ITSupportTechnicianEmail" />
+                <ScalarProperty Name="ITSupportTechnicianPhoneNumber" ColumnName="ITSupportTechnicianPhoneNumber" />
+                <ScalarProperty Name="ITSupportTechnicianSpecialty" ColumnName="ITSupportTechnicianSpecialty" />
+                <ScalarProperty Name="AccountCreationTime" ColumnName="AccountCreationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITSupportTickets">
+            <EntityTypeMapping TypeName="AutoMotivationITSupportHelpdeskDatabaseModel.ITSupportTicket">
+              <MappingFragment StoreEntitySet="ITSupportTicket">
+                <ScalarProperty Name="ITSupportTicketID" ColumnName="ITSupportTicketID" />
+                <ScalarProperty Name="GeneralEmployeeID" ColumnName="GeneralEmployeeID" />
+                <ScalarProperty Name="ITSupportTechnicianID" ColumnName="ITSupportTechnicianID" />
+                <ScalarProperty Name="ITSupportTicketPriority" ColumnName="ITSupportTicketPriority" />
+                <ScalarProperty Name="ITSupportTicketCategory" ColumnName="ITSupportTicketCategory" />
+                <ScalarProperty Name="ITSupportTicketSubject" ColumnName="ITSupportTicketSubject" />
+                <ScalarProperty Name="ITSupportTicketDescription" ColumnName="ITSupportTicketDescription" />
+                <ScalarProperty Name="ITSupportTicketCreationTime" ColumnName="ITSupportTicketCreationTime" />
+                <ScalarProperty Name="ITSupportTicketComments" ColumnName="ITSupportTicketComments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ManagerAccounts">
+            <EntityTypeMapping TypeName="AutoMotivationITSupportHelpdeskDatabaseModel.ManagerAccount">
+              <MappingFragment StoreEntitySet="ManagerAccount">
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="ManagerFirstName" ColumnName="ManagerFirstName" />
+                <ScalarProperty Name="ManagerLastName" ColumnName="ManagerLastName" />
+                <ScalarProperty Name="ManagerUsername" ColumnName="ManagerUsername" />
+                <ScalarProperty Name="ManagerPassword" ColumnName="ManagerPassword" />
+                <ScalarProperty Name="ManagerEmail" ColumnName="ManagerEmail" />
+                <ScalarProperty Name="ManagerPhoneNumber" ColumnName="ManagerPhoneNumber" />
+                <ScalarProperty Name="AccountCreationTime" ColumnName="AccountCreationTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
