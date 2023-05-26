@@ -42,7 +42,7 @@
                 <div class="row bg-dark text-white p-3 rounded-bottom">
                     <div class="col">
                         <h3 class="form-label">Email</h3>
-                        <asp:TextBox ID="tbx_Email" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                        <asp:TextBox ID="tbx_Email" runat="server" CssClass="form-control" placeholder="Email" TextMode="Email"></asp:TextBox>
                     </div>
                     <div class="col">
                         <h3 class="form-label text-center">Phone Number</h3>

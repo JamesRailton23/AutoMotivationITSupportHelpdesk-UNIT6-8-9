@@ -41,7 +41,7 @@
                                 <SortedDescendingHeaderStyle BackColor="#383838" />
                             </asp:GridView>
                             <br />
-                            <asp:SqlDataSource ID="sql_tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [SupportTicketID], [TicketPriority], [TicketCategory], [TicketSubject], [CreationTime], [TechnicianID] FROM [SupportTicket]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="sql_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [SupportTicketID], [TicketPriority], [TicketCategory], [TicketSubject], [CreationTime], [TechnicianID] FROM [SupportTicket]"></asp:SqlDataSource>
                         </div>
                     </div>
                     <div class="card text-center my-2" style="width: 70rem;">

@@ -17,7 +17,7 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold" style="font-family: 'IBM Plex Sans', sans-serif;">Delete Technicians</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_technicians" runat="server" CssClass=" justify-content-center align-content-center p-4" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="TechnicianID" DataSourceID="sql_technicans">
+                <asp:GridView ID="gv_ITSupport_Technicians_Account" runat="server" CssClass=" justify-content-center align-content-center p-4" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="TechnicianID" DataSourceID="sql_technicans">
                     <Columns>
                         <asp:BoundField DataField="TechnicianID" HeaderText="TechnicianID" InsertVisible="False" ReadOnly="True" SortExpression="TechnicianID" />
                         <asp:BoundField DataField="TechnicianFirstName" HeaderText="FirstName" SortExpression="TechnicianFirstName" />
@@ -39,12 +39,12 @@
                 </asp:GridView>
             </div>
             <div class="row p-4">
-                <asp:SqlDataSource ID="sql_technicans" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TechnicianID], [TechnicianFirstName], [TechnicianLastName], [TechnicianEmail], [TechnicianPhoneNumber], [TechnicianSpecialty], [AccountCreationTime] FROM [TechnicianAccount]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sql_ITSupport_Technicians" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TechnicianID], [TechnicianFirstName], [TechnicianLastName], [TechnicianEmail], [TechnicianPhoneNumber], [TechnicianSpecialty], [AccountCreationTime] FROM [TechnicianAccount]"></asp:SqlDataSource>
                 <br />
             </div>
             <div class="row p-4">
                 <h3>Return back to manager portal</h3>
-                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" />
+                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_Manager_Portal_Return_Click" />
             </div>
         </div>
     </form>

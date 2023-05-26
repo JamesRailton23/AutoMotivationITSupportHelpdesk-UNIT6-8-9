@@ -21,7 +21,7 @@
             </div>
             <div class="col text-white bg-dark m-3 p-4 rounded">
                 <h3>Password</h3>
-                <asp:TextBox ID="tbx_Password" runat="server" CssClass="form-control" type="password"></asp:TextBox>
+                <asp:TextBox ID="tbx_Password" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
             <div class="row justify-content-center align-items-center">
                 <asp:Button ID="btn_Account_Login" runat="server" Text="LOGIN" CssClass="btn btn-success btn-lg" Width="550" Height="60" OnClick="btn_Account_Login_Click" />

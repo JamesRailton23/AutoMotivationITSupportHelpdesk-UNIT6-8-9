@@ -25,7 +25,7 @@
                     <asp:Button ID="btn_Account_Login" runat="server" Text="HELPDESK LOGIN" class="btn btn-secondary" Width="250" Height="50" OnClick="btn_Account_Login_Click"/>
                 </div>
                 <div class="col">
-                    <asp:Button ID="btn_General_Employee_Create_Account" runat="server" Text="CREATE GENERAL EMPLOYEE ACCOUNT" class="btn btn-secondary" Width="250" Height="50" OnClick="btn_General_Employee_Create_Account_Click"/>
+                    <asp:Button ID="btn_General_Employee_Create_Account" runat="server" Text="CREATE GENERAL EMPLOYEE ACCOUNT" class="btn btn-secondary" Width="500px" Height="50" OnClick="btn_General_Employee_Create_Account_Click"/>
                 </div>
             </div>
         </div>

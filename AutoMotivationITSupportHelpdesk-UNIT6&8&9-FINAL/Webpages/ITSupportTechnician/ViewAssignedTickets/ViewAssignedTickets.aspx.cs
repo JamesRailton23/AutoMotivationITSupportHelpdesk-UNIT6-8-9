@@ -16,7 +16,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
 
         protected void btn_ITSupport_Technician_Portal_Return_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("../ITSupportTechnicianPortal/ITSupportTechnicianPortal.aspx");
         }
     }
 }

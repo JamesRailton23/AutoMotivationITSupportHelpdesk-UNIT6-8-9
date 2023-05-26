@@ -111,10 +111,14 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Web.config" />
+    <Content Include="Webpages\Default\automotivation-high-resolution-logo-white-on-black-background.png" />
     <Content Include="Webpages\Default\Default.aspx" />
     <Content Include="Webpages\GeneralEmployee\CreateNewGeneralEmployeeAccount\CreateNewGeneralEmployeeAccount.aspx" />
     <Content Include="Webpages\GeneralEmployee\CreateNewITSupportTicket\CreateNewITSupportTicket.aspx" />
+    <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\exit.png" />
     <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\GeneralEmployeePortal.aspx" />
+    <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\magnifier_search_zoom_icon.png" />
+    <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\ticket_icon.png" />
     <Content Include="Webpages\GeneralEmployee\ViewCreatedITSupportTickets\ViewCreatedITSupportTickets.aspx" />
     <Content Include="Webpages\ITSupportTechnician\AssignSupportTickets\AssignSupportTickets.aspx" />
     <Content Include="Webpages\ITSupportTechnician\ITSupportTechnicianPortal\ITSupportTechnicianPortal.aspx" />

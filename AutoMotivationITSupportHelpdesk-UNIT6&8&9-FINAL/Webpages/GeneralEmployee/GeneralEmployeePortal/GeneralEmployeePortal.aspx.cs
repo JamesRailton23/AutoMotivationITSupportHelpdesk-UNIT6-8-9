@@ -11,22 +11,23 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lb_Username.Text = Session["GeneralEmployeeUsername"].ToString();
         }
 
         protected void btn_New_Support_Ticket_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Webpages/GeneralEmployee/CreateNewITSupportTicket/CreateNewITSupportTicket.aspx");
         }
 
         protected void btn_View_Tickets_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Webpages/GeneralEmployee/ViewCreatedITSupportTickets/ViewCreatedITSupportTickets.aspx");
         }
 
         protected void btn_Logout_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Webpages/Default/Default.aspx");
+            Session.Clear();
         }
     }
 }

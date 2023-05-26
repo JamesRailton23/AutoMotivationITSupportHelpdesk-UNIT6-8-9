@@ -17,7 +17,7 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold" style="font-family: 'IBM Plex Sans', sans-serif;">Delete General users</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_Gerneral_Employees" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="sql_general_users">
+                <asp:GridView ID="gv_Gerneral_Employees_Accounts" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="sql_general_users">
                     <Columns>
                         <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
                         <asp:BoundField DataField="UserFirstName" HeaderText="First Name" SortExpression="UserFirstName" />
@@ -39,11 +39,11 @@
             </div>
             <div class="row p-4">
                 <h3>Return back to manager portal</h3>
-                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" />
+                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_Manager_Portal_Return_Click" />
 
             </div>
         </div>
-        <asp:SqlDataSource ID="sql_general_users" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [UserID], [UserFirstName], [UserLastName], [UserEmail], [UserPhoneNumber], [AccountCreationTime] FROM [GeneralUserAccount]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sql_General_Employees" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [UserID], [UserFirstName], [UserLastName], [UserEmail], [UserPhoneNumber], [AccountCreationTime] FROM [GeneralUserAccount]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

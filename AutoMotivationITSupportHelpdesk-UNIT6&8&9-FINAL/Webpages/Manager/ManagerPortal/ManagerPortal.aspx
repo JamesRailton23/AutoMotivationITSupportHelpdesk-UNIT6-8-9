@@ -20,14 +20,14 @@
                         <asp:Image ID="img_viewTickets" runat="server" ImageUrl="magnifier_search_zoom_icon.png" Width="500" Height="500" CssClass="card-img-top" />
                         <div class="card-body d-flex flex-column justify-content-center align-content-center">
                             <h5 class="card-title fw-bold text-decoration-underline">View all submitted tickets</h5>
-                            <asp:Button ID="btn_View_All_Tickets" Text="VIEW ALL TICKETS" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50"  />
+                            <asp:Button ID="btn_View_All_Tickets" Text="VIEW ALL TICKETS" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50" OnClick="btn_View_All_Tickets_Click"  />
                         </div>
                     </div>
                     <div class="card text-center rounded ">
                         <asp:Image ID="img_createAccount" runat="server" ImageUrl="createAccount.png" Width="500" Height="500" CssClass="card-img-top" />
                         <div class="card-body d-flex flex-column justify-content-center align-content-center ">
                             <h5 class="card-title fw-bold text-decoration-underline">Create technician Account</h5>
-                            <asp:Button ID="btn_Create_Technician_Account" Text="CREATE IT SUPPORT TECHNICIAN ACCOUNT" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50"  />
+                            <asp:Button ID="btn_Create_Technician_Account" Text="CREATE IT SUPPORT TECHNICIAN ACCOUNT" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50" OnClick="btn_Create_Technician_Account_Click"  />
                         </div>
                     </div>
                     <br />
@@ -38,14 +38,14 @@
                         <asp:Image ID="img_Delete_Technican" runat="server" ImageUrl="deleteAccount.png" Width="500" Height="500" CssClass="card-img-top" />
                         <div class="card-body d-flex flex-column justify-content-center align-content-center">
                             <h5 class="card-title fw-bold text-decoration-underline">Delete technician Account</h5>
-                            <asp:Button ID="btn_Delete_Technician_Account" Text="DELETE IT SUPPORT TECHNICIAN ACCOUNT" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50"  />
+                            <asp:Button ID="btn_Delete_Technician_Account" Text="DELETE IT-SUPPORT TECHNICIAN ACCOUNT" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50" OnClick="btn_Delete_Technician_Account_Click"  />
                         </div>
                     </div>
                     <div class="card text-center rounded">
                         <asp:Image ID="img_Delete_General_Employee" runat="server" ImageUrl="deleteAccount.png" Width="500" Height="500" CssClass="card-img-top" />
                         <div class="card-body d-flex flex-column justify-content-center align-content-center ">
                             <h5 class="card-title fw-bold text-decoration-underline">Delete general employee account</h5>
-                            <asp:Button ID="btn_Delete_General_Employee_Account" Text="DELETE GENERAL EMPLOYEE ACCOUNT" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50"/>
+                            <asp:Button ID="btn_Delete_General_Employee_Account" Text="DELETE GENERAL EMPLOYEE ACCOUNT" CssClass="btn btn-secondary mx-auto" runat="server" Width="500" Height="50" OnClick="btn_Delete_General_Employee_Account_Click"/>
                         </div>
                     </div>
                     <br />
@@ -57,7 +57,7 @@
                         </div>
                         <br />
                         <div class="row justify-content-center">
-                            <asp:Button ID="btn_Logout" Text="LOGOUT" CssClass="btn btn-danger mx-auto" runat="server" Width="100" Height="50"/>
+                            <asp:Button ID="btn_Logout" Text="LOGOUT" CssClass="btn btn-danger mx-auto" runat="server" Width="100" Height="50" OnClick="btn_Logout_Click"/>
                         </div>
                     </div>
                 </div>

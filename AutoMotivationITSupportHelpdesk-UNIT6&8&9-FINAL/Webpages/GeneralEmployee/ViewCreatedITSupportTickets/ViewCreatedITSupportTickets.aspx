@@ -17,17 +17,16 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold" style="font-family: 'IBM Plex Sans', sans-serif; background-color: #d3d3d3">Your Tickets</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_Your_Created_Tickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="SupportTicketID" DataSourceID="sql_guvt">
+                <asp:GridView ID="gv_Your_Tickets" runat="server" AutoGenerateColumns="False" DataKeyNames="ITSupportTicketID" DataSourceID="sql_Your_Tickets" BackColor="#CCCCCC" BorderColor="#999999" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" ShowHeaderWhenEmpty="True">
                     <Columns>
-                        <asp:BoundField DataField="SupportTicketID" HeaderText="SupportTicketID" InsertVisible="False" ReadOnly="True" SortExpression="SupportTicketID" />
-                        <asp:BoundField DataField="TicketPriority" HeaderText="TicketPriority" SortExpression="TicketPriority" />
-                        <asp:BoundField DataField="TicketCategory" HeaderText="TicketCategory" SortExpression="TicketCategory" />
-                        <asp:BoundField DataField="TicketSubject" HeaderText="TicketSubject" SortExpression="TicketSubject" />
-                        <asp:BoundField DataField="TicketDescription" HeaderText="TicketDescription" SortExpression="TicketDescription" />
-                        <asp:BoundField DataField="CreationTime" HeaderText="CreationTime" SortExpression="CreationTime" />
-                        <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
-                        <asp:BoundField DataField="TechnicianID" HeaderText="TechnicianID" SortExpression="TechnicianID" />
-                        <asp:BoundField DataField="TicketComments" HeaderText="TicketComments" SortExpression="TicketComments" />
+                        <asp:BoundField DataField="ITSupportTicketID" HeaderText="TicketID" InsertVisible="False" ReadOnly="True" SortExpression="ITSupportTicketID" />
+                        <asp:BoundField DataField="ITSupportTechnicianID" HeaderText="TechnicianID" SortExpression="ITSupportTechnicianID" />
+                        <asp:BoundField DataField="ITSupportTicketPriority" HeaderText="TicketPriority" SortExpression="ITSupportTicketPriority" />
+                        <asp:BoundField DataField="ITSupportTicketCategory" HeaderText="TicketCategory" SortExpression="ITSupportTicketCategory" />
+                        <asp:BoundField DataField="ITSupportTicketSubject" HeaderText="TicketSubject" SortExpression="ITSupportTicketSubject" />
+                        <asp:BoundField DataField="ITSupportTicketDescription" HeaderText="TicketDescription" SortExpression="ITSupportTicketDescription" />
+                        <asp:BoundField DataField="ITSupportTicketCreationTime" HeaderText="TicketCreationTime" SortExpression="ITSupportTicketCreationTime" />
+                        <asp:BoundField DataField="ITSupportTicketComments" HeaderText="TicketComments" SortExpression="ITSupportTicketComments" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -39,17 +38,17 @@
                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                     <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
+                <asp:SqlDataSource ID="sql_Your_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ITSupportTicket] WHERE ([GeneralEmployeeID] = @GeneralEmployeeID)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="GeneralEmployeeID" SessionField="GeneralEmployeeID" Type="Int32" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
             </div>
             <div class="row p-4">
                 <h3>Return back to general employee portal</h3>
                 <asp:Button ID="btn_General_Employee_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_General_Employee_Portal_Return_Click"/>
             </div>
         </div>
-        <asp:SqlDataSource ID="sql_General_User_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [SupportTicket] WHERE ([UserID] = @UserID)">
-            <SelectParameters>
-                <asp:SessionParameter Name="UserID" SessionField="UserID" Type="Int32" />
-            </SelectParameters>
-        </asp:SqlDataSource>
         <br />
     </form>
 </body>

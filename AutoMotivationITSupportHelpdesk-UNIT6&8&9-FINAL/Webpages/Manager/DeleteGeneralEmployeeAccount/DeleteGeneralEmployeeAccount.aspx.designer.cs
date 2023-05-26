@@ -24,13 +24,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// gv_Gerneral_Employees control.
+        /// gv_Gerneral_Employees_Accounts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Gerneral_Employees;
+        protected global::System.Web.UI.WebControls.GridView gv_Gerneral_Employees_Accounts;
 
         /// <summary>
         /// btn_Manager_Portal_Return control.
@@ -42,12 +42,12 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
         protected global::System.Web.UI.WebControls.Button btn_Manager_Portal_Return;
 
         /// <summary>
-        /// sql_general_users control.
+        /// sql_General_Employees control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sql_general_users;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_General_Employees;
     }
 }

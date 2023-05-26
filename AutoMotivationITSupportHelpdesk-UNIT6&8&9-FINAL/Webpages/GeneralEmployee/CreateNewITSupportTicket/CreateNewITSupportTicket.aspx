@@ -39,7 +39,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-decoration-underline fw-bold">Priority of this issue</h5>
                             <p>please state the priority of this issue, Type "L" for Low, "M" for Medium or "H" for high</p>
-                            <asp:TextBox ID="tbx_Issue_Priorty" runat="server" CssClass="form-control form-control-lg" />
+                            <asp:TextBox ID="tbx_Issue_Priority" runat="server" CssClass="form-control form-control-lg" />
                         </div>
                     </div>
                 </div>

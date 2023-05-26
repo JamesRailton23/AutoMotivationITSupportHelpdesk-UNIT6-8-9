@@ -17,7 +17,7 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold">Tickets</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_yourtickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets">
+                <asp:GridView ID="gv_All_Support_Tickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets">
                     <Columns>
                         <asp:BoundField DataField="SupportTicketID" HeaderText="SupportTicketID" InsertVisible="False" ReadOnly="True" SortExpression="SupportTicketID" />
                         <asp:BoundField DataField="TicketPriority" HeaderText="TicketPriority" SortExpression="TicketPriority" />
@@ -42,11 +42,11 @@
             </div>
             <div class="row p-4">
                 <h3>Return back to manager portal</h3>
-                <asp:Button ID="btn_portalreturn" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_portalreturn_Click" />
+                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_Manager_Portal_Return_Click"/>
             </div>
         </div>
         <br />
-        <asp:SqlDataSource ID="sql_tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [SupportTicket]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sql_ITSupport_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [SupportTicket]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

@@ -24,22 +24,22 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// gv_technicians control.
+        /// gv_ITSupport_Technicians_Account control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_technicians;
+        protected global::System.Web.UI.WebControls.GridView gv_ITSupport_Technicians_Account;
 
         /// <summary>
-        /// sql_technicans control.
+        /// sql_ITSupport_Technicians control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sql_technicans;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_ITSupport_Technicians;
 
         /// <summary>
         /// btn_Manager_Portal_Return control.
