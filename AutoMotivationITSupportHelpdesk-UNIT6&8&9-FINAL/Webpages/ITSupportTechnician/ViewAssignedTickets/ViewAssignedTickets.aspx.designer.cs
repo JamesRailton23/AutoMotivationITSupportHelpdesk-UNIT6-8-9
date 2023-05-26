@@ -33,6 +33,24 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.WebControls.GridView gv_Your_Assigned_Tickets;
 
         /// <summary>
+        /// tbx_comments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbx_comments;
+
+        /// <summary>
+        /// btn_Add_Ticket_Comments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Add_Ticket_Comments;
+
+        /// <summary>
         /// btn_ITSupport_Technician_Portal_Return control.
         /// </summary>
         /// <remarks>

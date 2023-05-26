@@ -18,5 +18,19 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         {
             Response.Redirect("~/Webpages/ITSupportTechnician/ITSupportTechnicianPortal/ITSupportTechnicianPortal.aspx");
         }
+        protected void btn_AssignTicket_Click(object sender, EventArgs e)
+        {
+            assignTicket();
+        }
+
+        protected void assignTicket()
+        {
+            var helpdeskDatabase = new AutoMotivationITSupportHelpdeskDatabaseEntities();
+            int ITSupportTechnicianID = (int)Session["ITSupportTechnicianID"];
+            var ITSupportTicket = helpdeskDatabase.ITSupportTickets.Find(Convert.ToInt32(gv_Tickets.SelectedValue));
+            ITSupportTicket.ITSupportTechnicianID = ITSupportTechnicianID;
+            helpdeskDatabase.SaveChanges();
+            gv_Tickets.DataBind();
+        }
     }
 }

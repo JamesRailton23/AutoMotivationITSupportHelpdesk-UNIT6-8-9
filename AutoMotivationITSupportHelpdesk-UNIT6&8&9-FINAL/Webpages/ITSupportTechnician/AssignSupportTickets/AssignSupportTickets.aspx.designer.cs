@@ -33,13 +33,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.WebControls.GridView gv_Tickets;
 
         /// <summary>
-        /// sql_Tickets control.
+        /// sql_Support_Tickets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sql_Tickets;
+        protected global::System.Web.UI.WebControls.SqlDataSource sql_Support_Tickets;
 
         /// <summary>
         /// btn_ITSupport_Technician_Portal_Return control.

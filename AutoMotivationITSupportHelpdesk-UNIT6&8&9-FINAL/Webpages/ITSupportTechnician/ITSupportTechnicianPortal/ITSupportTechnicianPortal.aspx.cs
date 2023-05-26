@@ -11,22 +11,23 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           lb_Username.Text = Session["ITSupportTechnicianUsername"].ToString();
         }
 
         protected void btn_Logout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../../Default.aspx");
+            Response.Redirect("~/Webpages/Default/Default.aspx");
+            Session.Clear();
         }
 
         protected void btn_Technicians_Assign_Tickets_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../AssignSupportTickets/AssignSupportTickets.aspx");
+            Response.Redirect("~/Webpages/ITSupportTechnician/AssignSupportTickets/AssignSupportTickets.aspx");
         }
 
         protected void btn_View_Assigned_Tickets_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../ViewAssignedTickets/ViewAssignedTickets.aspx");
+            Response.Redirect("~/Webpages/ITSupportTechnician/ViewAssignedTickets/ViewAssignedTickets.aspx");
         }
     }
 }

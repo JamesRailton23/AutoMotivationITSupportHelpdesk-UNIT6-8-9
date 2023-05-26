@@ -121,7 +121,10 @@
     <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\ticket_icon.png" />
     <Content Include="Webpages\GeneralEmployee\ViewCreatedITSupportTickets\ViewCreatedITSupportTickets.aspx" />
     <Content Include="Webpages\ITSupportTechnician\AssignSupportTickets\AssignSupportTickets.aspx" />
+    <Content Include="Webpages\ITSupportTechnician\ITSupportTechnicianPortal\add-ticket-icon.png" />
+    <Content Include="Webpages\ITSupportTechnician\ITSupportTechnicianPortal\exit.png" />
     <Content Include="Webpages\ITSupportTechnician\ITSupportTechnicianPortal\ITSupportTechnicianPortal.aspx" />
+    <Content Include="Webpages\ITSupportTechnician\ITSupportTechnicianPortal\magnifier_search_zoom_icon.png" />
     <Content Include="Webpages\ITSupportTechnician\ViewAssignedTickets\ViewAssignedTickets.aspx" />
     <Content Include="Webpages\Login\Login.aspx" />
     <Content Include="Webpages\Manager\CreateNewITSupportTechnicianAccount\CreateNewITSupportTechnicianAccount.aspx" />

@@ -21,14 +21,24 @@
                         <div class="card-body">
                             <h5 class="card-title text-decoration-underline fw-bold">Tickets</h5>
                             <p>List of all the tickets within the system</p>
-                            <asp:GridView ID="gv_Tickets" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets" ForeColor="Black" HorizontalAlign="Center">
+                            <p>To assign a ticket press the &quot;select&quot; button within the gridview and then click the &quot;delete&quot; button within the gridview also</p>
+                            <asp:GridView ID="gv_Tickets" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="ITSupportTicketID" DataSourceID="sql_Support_Tickets" ForeColor="Black" HorizontalAlign="Center" AllowPaging="True">
                                 <Columns>
-                                    <asp:BoundField DataField="SupportTicketID" HeaderText="SupportTicketID" InsertVisible="False" ReadOnly="True" SortExpression="SupportTicketID" />
-                                    <asp:BoundField DataField="TicketPriority" HeaderText="TicketPriority" SortExpression="TicketPriority" />
-                                    <asp:BoundField DataField="TicketCategory" HeaderText="TicketCategory" SortExpression="TicketCategory" />
-                                    <asp:BoundField DataField="TicketSubject" HeaderText="TicketSubject" SortExpression="TicketSubject" />
-                                    <asp:BoundField DataField="CreationTime" HeaderText="CreationTime" SortExpression="CreationTime" />
-                                    <asp:BoundField DataField="TechnicianID" HeaderText="TechnicianID" SortExpression="TechnicianID" />
+                                    <asp:CommandField HeaderText="SelectTicket" ShowSelectButton="True" ButtonType="Button" SelectText="SELECT" >
+                                    <ControlStyle CssClass="btn btn-primary"/>
+                                    </asp:CommandField>
+                                    <asp:TemplateField HeaderText="AssignButton">
+                                        <ItemTemplate>
+                                            <asp:Button ID="btn_AssignTicket" runat="server" Text="ASSIGN" CssClass="btn btn-success" OnClick="btn_AssignTicket_Click"/>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:BoundField DataField="ITSupportTicketID" HeaderText="TicketID" InsertVisible="False" ReadOnly="True" SortExpression="ITSupportTicketID" />
+                                    <asp:BoundField DataField="GeneralEmployeeID" HeaderText="EmployeeID" SortExpression="GeneralEmployeeID" />
+                                    <asp:BoundField DataField="ITSupportTechnicianID" HeaderText="TechnicianID" SortExpression="ITSupportTechnicianID" />
+                                    <asp:BoundField DataField="ITSupportTicketPriority" HeaderText="TicketPriority" SortExpression="ITSupportTicketPriority" />
+                                    <asp:BoundField DataField="ITSupportTicketCategory" HeaderText="TicketCategory" SortExpression="ITSupportTicketCategory" />
+                                    <asp:BoundField DataField="ITSupportTicketSubject" HeaderText="TicketSubject" SortExpression="ITSupportTicketSubject" />
+                                    <asp:BoundField DataField="ITSupportTicketCreationTime" HeaderText="CreationTime" SortExpression="ITSupportTicketCreationTime" />
                                 </Columns>
                                 <FooterStyle BackColor="#CCCCCC" />
                                 <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -41,7 +51,7 @@
                                 <SortedDescendingHeaderStyle BackColor="#383838" />
                             </asp:GridView>
                             <br />
-                            <asp:SqlDataSource ID="sql_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [SupportTicketID], [TicketPriority], [TicketCategory], [TicketSubject], [CreationTime], [TechnicianID] FROM [SupportTicket]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="sql_Support_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ITSupportTicket]"></asp:SqlDataSource>
                         </div>
                     </div>
                     <div class="card text-center my-2" style="width: 70rem;">
