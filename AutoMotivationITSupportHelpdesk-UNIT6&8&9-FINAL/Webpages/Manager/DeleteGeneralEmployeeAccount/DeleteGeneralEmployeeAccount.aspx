@@ -19,19 +19,21 @@
             <div class="row p-4 justify-content-center">
                 <asp:GridView ID="gv_Gerneral_Employees_Accounts" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="GeneralEmployeeID" DataSourceID="sql_General_Employees" AllowPaging="True">
                     <Columns>
-                        <asp:CommandField ButtonType="Button" SelectText="SELECT" ShowSelectButton="True" HeaderText="SelectEmployee" />
+                        <asp:CommandField ButtonType="Button" SelectText="SELECT" ShowSelectButton="True" HeaderText="SelectEmployee" >
+                        <ControlStyle CssClass="btn btn-primary" />
+                        </asp:CommandField>
                         <asp:TemplateField HeaderText="DeleteEmployee">
                             <ItemTemplate>
                                 <asp:Button ID="btn_Delete_General_Employee" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_Delete_General_Employee_Click"/>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="GeneralEmployeeID" HeaderText="EmployeeID" InsertVisible="False" ReadOnly="True" SortExpression="GeneralEmployeeID" />
-                        <asp:BoundField DataField="GeneralEmployeeFirstName" HeaderText="EmployeeFirstName" SortExpression="GeneralEmployeeFirstName" />
-                        <asp:BoundField DataField="GeneralEmployeeLastName" HeaderText="EmployeeLastName" SortExpression="GeneralEmployeeLastName" />
-                        <asp:BoundField DataField="GeneralEmployeeUsername" HeaderText="EmployeeUsername" SortExpression="GeneralEmployeeUsername" />
+                        <asp:BoundField DataField="GeneralEmployeeFirstName" HeaderText="FirstName" SortExpression="GeneralEmployeeFirstName" />
+                        <asp:BoundField DataField="GeneralEmployeeLastName" HeaderText="LastName" SortExpression="GeneralEmployeeLastName" />
+                        <asp:BoundField DataField="GeneralEmployeeUsername" HeaderText="Username" SortExpression="GeneralEmployeeUsername" />
                         <asp:BoundField DataField="GeneralEmployeeEmail" HeaderText="EmployeeEmail" SortExpression="GeneralEmployeeEmail" />
-                        <asp:BoundField DataField="GeneralEmployeePhoneNumber" HeaderText="EmployeePhoneNumber" SortExpression="GeneralEmployeePhoneNumber" />
-                        <asp:BoundField DataField="AccountCreationTime" HeaderText="AccountCreationTime" SortExpression="AccountCreationTime" />
+                        <asp:BoundField DataField="GeneralEmployeePhoneNumber" HeaderText="PhoneNumber" SortExpression="GeneralEmployeePhoneNumber" />
+                        <asp:BoundField DataField="AccountCreationTime" HeaderText="CreationTime" SortExpression="AccountCreationTime" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

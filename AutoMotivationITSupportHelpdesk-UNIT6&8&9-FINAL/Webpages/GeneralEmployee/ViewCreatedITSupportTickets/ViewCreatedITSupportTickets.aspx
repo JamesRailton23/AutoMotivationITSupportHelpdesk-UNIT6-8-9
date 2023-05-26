@@ -21,12 +21,12 @@
                     <Columns>
                         <asp:BoundField DataField="ITSupportTicketID" HeaderText="TicketID" InsertVisible="False" ReadOnly="True" SortExpression="ITSupportTicketID" />
                         <asp:BoundField DataField="ITSupportTechnicianID" HeaderText="TechnicianID" SortExpression="ITSupportTechnicianID" />
-                        <asp:BoundField DataField="ITSupportTicketPriority" HeaderText="TicketPriority" SortExpression="ITSupportTicketPriority" />
-                        <asp:BoundField DataField="ITSupportTicketCategory" HeaderText="TicketCategory" SortExpression="ITSupportTicketCategory" />
-                        <asp:BoundField DataField="ITSupportTicketSubject" HeaderText="TicketSubject" SortExpression="ITSupportTicketSubject" />
-                        <asp:BoundField DataField="ITSupportTicketDescription" HeaderText="TicketDescription" SortExpression="ITSupportTicketDescription" />
-                        <asp:BoundField DataField="ITSupportTicketCreationTime" HeaderText="TicketCreationTime" SortExpression="ITSupportTicketCreationTime" />
-                        <asp:BoundField DataField="ITSupportTicketComments" HeaderText="TicketComments" SortExpression="ITSupportTicketComments" />
+                        <asp:BoundField DataField="ITSupportTicketPriority" HeaderText="Priority" SortExpression="ITSupportTicketPriority" />
+                        <asp:BoundField DataField="ITSupportTicketCategory" HeaderText="Category" SortExpression="ITSupportTicketCategory" />
+                        <asp:BoundField DataField="ITSupportTicketSubject" HeaderText="Subject" SortExpression="ITSupportTicketSubject" />
+                        <asp:BoundField DataField="ITSupportTicketDescription" HeaderText="Description" SortExpression="ITSupportTicketDescription" />
+                        <asp:BoundField DataField="ITSupportTicketCreationTime" HeaderText="CreationTime" SortExpression="ITSupportTicketCreationTime" />
+                        <asp:BoundField DataField="ITSupportTicketComments" HeaderText="Comments" SortExpression="ITSupportTicketComments" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

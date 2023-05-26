@@ -20,14 +20,14 @@
                 <asp:GridView ID="gv_All_Support_Tickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets">
                     <Columns>
                         <asp:BoundField DataField="SupportTicketID" HeaderText="SupportTicketID" InsertVisible="False" ReadOnly="True" SortExpression="SupportTicketID" />
-                        <asp:BoundField DataField="TicketPriority" HeaderText="TicketPriority" SortExpression="TicketPriority" />
-                        <asp:BoundField DataField="TicketCategory" HeaderText="TicketCategory" SortExpression="TicketCategory" />
-                        <asp:BoundField DataField="TicketSubject" HeaderText="TicketSubject" SortExpression="TicketSubject" />
-                        <asp:BoundField DataField="TicketDescription" HeaderText="TicketDescription" SortExpression="TicketDescription" />
+                        <asp:BoundField DataField="TicketPriority" HeaderText="Priority" SortExpression="TicketPriority" />
+                        <asp:BoundField DataField="TicketCategory" HeaderText="Category" SortExpression="TicketCategory" />
+                        <asp:BoundField DataField="TicketSubject" HeaderText="Subject" SortExpression="TicketSubject" />
+                        <asp:BoundField DataField="TicketDescription" HeaderText="Description" SortExpression="TicketDescription" />
                         <asp:BoundField DataField="CreationTime" HeaderText="CreationTime" SortExpression="CreationTime" />
                         <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
                         <asp:BoundField DataField="TechnicianID" HeaderText="TechnicianID" SortExpression="TechnicianID" />
-                        <asp:BoundField DataField="TicketComments" HeaderText="TicketComments" SortExpression="TicketComments" />
+                        <asp:BoundField DataField="TicketComments" HeaderText="Comments" SortExpression="TicketComments" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

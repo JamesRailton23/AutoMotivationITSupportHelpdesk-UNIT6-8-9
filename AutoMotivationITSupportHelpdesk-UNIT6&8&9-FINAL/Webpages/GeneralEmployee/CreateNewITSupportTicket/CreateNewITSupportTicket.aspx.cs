@@ -32,6 +32,12 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             newSupportTicket.ITSupportTicketCreationTime = DateTime.Now;
             supportTicket.Add(newSupportTicket);
             helpdeskDatabase.SaveChanges();
+            tbx_Issue_Subject.Enabled = false;
+            ddl_Category.Enabled = false;
+            tbx_Issue_Priority.Enabled = false;
+            tbx_Issue_Description.Enabled = false;
+            btn_Submit_Support_Ticket.Enabled = false;
+            
         }
     }
 }

@@ -34,6 +34,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             newGeneralEmployee.AccountCreationTime = DateTime.Now;
             generalEmployeeAccount.Add(newGeneralEmployee);
             helpdeskDatabase.SaveChanges();
+            tbx_First_Name.Enabled = false;
+            tbx_Last_Name.Enabled = false;
+            tbx_Email.Enabled = false;
+            tbx_Username.Enabled = false;
+            tbx_Password.Enabled = false;
+            tbx_Phone_Number.Enabled = false;
+            btn_Submit_General_Employee_Account.Enabled = false;
         }
     }
 }

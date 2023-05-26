@@ -16,7 +16,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.ViewA
 
         protected void btn_Manager_Portal_Return_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../ManagerPortal/ManagerPortal.aspx");
+            Response.Redirect("~/Webpages/Manager/ManagerPortal/ManagerPortal.aspx");
         }
     }
 }

@@ -29,6 +29,11 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
            generalEmployee.GeneralEmployeeUsername = tbx_Username.Text.Trim();
            helpdeskDatabase.SaveChanges();
            gv_Employee_Account_Details.DataBind();
+           tbx_Email.Enabled = false;
+           tbx_Phone_Number.Enabled = false;
+           tbx_Password.Enabled = false;
+           tbx_Username.Enabled = false;
+           btn_Change_Employee_Account_Details.Enabled = false;
 
 
         }

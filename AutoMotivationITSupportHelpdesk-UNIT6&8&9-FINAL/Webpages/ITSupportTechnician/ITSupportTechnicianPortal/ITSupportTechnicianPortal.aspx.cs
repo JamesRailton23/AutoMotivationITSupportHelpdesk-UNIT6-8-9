@@ -17,7 +17,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected void btn_Logout_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Webpages/Default/Default.aspx");
-            Session.Clear();
+            Session.Abandon();
         }
 
         protected void btn_Technicians_Assign_Tickets_Click(object sender, EventArgs e)

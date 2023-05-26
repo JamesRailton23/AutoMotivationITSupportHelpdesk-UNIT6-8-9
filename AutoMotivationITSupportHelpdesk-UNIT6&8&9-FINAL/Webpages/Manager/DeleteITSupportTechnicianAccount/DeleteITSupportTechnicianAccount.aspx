@@ -19,20 +19,22 @@
             <div class="row p-4 justify-content-center">
                 <asp:GridView ID="gv_ITSupport_Technicians_Account" runat="server" CssClass=" justify-content-center align-content-center p-4" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="ITSupportTechnicianID" DataSourceID="sql_ITSupport_Technicians" AllowPaging="True">
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" ButtonType="Button" HeaderText="Select Technician" SelectText="SELECT" />
+                        <asp:CommandField ShowSelectButton="True" ButtonType="Button" HeaderText="Select Technician" SelectText="SELECT" >
+                        <ControlStyle CssClass="btn btn-primary" />
+                        </asp:CommandField>
                         <asp:TemplateField HeaderText="Delete Technician">
                             <ItemTemplate>
                                 <asp:Button ID="btn_Delete_Technician" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_Delete_Technician_Click"/>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="ITSupportTechnicianID" HeaderText="TechnicianID" InsertVisible="False" ReadOnly="True" SortExpression="ITSupportTechnicianID" />
-                        <asp:BoundField DataField="ITSupportTechnicianFirstName" HeaderText="First Name" SortExpression="ITSupportTechnicianFirstName" />
-                        <asp:BoundField DataField="ITSupportTechnicianLastName" HeaderText="Last Name" SortExpression="ITSupportTechnicianLastName" />
+                        <asp:BoundField DataField="ITSupportTechnicianFirstName" HeaderText="FirstName" SortExpression="ITSupportTechnicianFirstName" />
+                        <asp:BoundField DataField="ITSupportTechnicianLastName" HeaderText="LastName" SortExpression="ITSupportTechnicianLastName" />
                         <asp:BoundField DataField="ITSupportTechnicianUsername" HeaderText="Username" SortExpression="ITSupportTechnicianUsername" />
                         <asp:BoundField DataField="ITSupportTechnicianEmail" HeaderText="Email" SortExpression="ITSupportTechnicianEmail" />
-                        <asp:BoundField DataField="ITSupportTechnicianPhoneNumber" HeaderText="Phone Number" SortExpression="ITSupportTechnicianPhoneNumber" />
+                        <asp:BoundField DataField="ITSupportTechnicianPhoneNumber" HeaderText="PhoneNumber" SortExpression="ITSupportTechnicianPhoneNumber" />
                         <asp:BoundField DataField="ITSupportTechnicianSpecialty" HeaderText="Specialty" SortExpression="ITSupportTechnicianSpecialty" />
-                        <asp:BoundField DataField="AccountCreationTime" HeaderText="Account Creation Time" SortExpression="AccountCreationTime" />
+                        <asp:BoundField DataField="AccountCreationTime" HeaderText="CreationTime" SortExpression="AccountCreationTime" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
