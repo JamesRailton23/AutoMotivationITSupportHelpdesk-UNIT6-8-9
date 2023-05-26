@@ -17,15 +17,22 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold" style="font-family: 'IBM Plex Sans', sans-serif;">Delete Technicians</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_ITSupport_Technicians_Account" runat="server" CssClass=" justify-content-center align-content-center p-4" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="TechnicianID" DataSourceID="sql_technicans">
+                <asp:GridView ID="gv_ITSupport_Technicians_Account" runat="server" CssClass=" justify-content-center align-content-center p-4" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="ITSupportTechnicianID" DataSourceID="sql_ITSupport_Technicians" AllowPaging="True">
                     <Columns>
-                        <asp:BoundField DataField="TechnicianID" HeaderText="TechnicianID" InsertVisible="False" ReadOnly="True" SortExpression="TechnicianID" />
-                        <asp:BoundField DataField="TechnicianFirstName" HeaderText="FirstName" SortExpression="TechnicianFirstName" />
-                        <asp:BoundField DataField="TechnicianLastName" HeaderText="LastName" SortExpression="TechnicianLastName" />
-                        <asp:BoundField DataField="TechnicianEmail" HeaderText="Email" SortExpression="TechnicianEmail" />
-                        <asp:BoundField DataField="TechnicianPhoneNumber" HeaderText="PhoneNumber" SortExpression="TechnicianPhoneNumber" />
-                        <asp:BoundField DataField="TechnicianSpecialty" HeaderText="Specialty" SortExpression="TechnicianSpecialty" />
-                        <asp:BoundField DataField="AccountCreationTime" HeaderText="CreationTime" SortExpression="AccountCreationTime" />
+                        <asp:CommandField ShowSelectButton="True" ButtonType="Button" HeaderText="Select Technician" SelectText="SELECT" />
+                        <asp:TemplateField HeaderText="Delete Technician">
+                            <ItemTemplate>
+                                <asp:Button ID="btn_Delete_Technician" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_Delete_Technician_Click"/>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="ITSupportTechnicianID" HeaderText="TechnicianID" InsertVisible="False" ReadOnly="True" SortExpression="ITSupportTechnicianID" />
+                        <asp:BoundField DataField="ITSupportTechnicianFirstName" HeaderText="First Name" SortExpression="ITSupportTechnicianFirstName" />
+                        <asp:BoundField DataField="ITSupportTechnicianLastName" HeaderText="Last Name" SortExpression="ITSupportTechnicianLastName" />
+                        <asp:BoundField DataField="ITSupportTechnicianUsername" HeaderText="Username" SortExpression="ITSupportTechnicianUsername" />
+                        <asp:BoundField DataField="ITSupportTechnicianEmail" HeaderText="Email" SortExpression="ITSupportTechnicianEmail" />
+                        <asp:BoundField DataField="ITSupportTechnicianPhoneNumber" HeaderText="Phone Number" SortExpression="ITSupportTechnicianPhoneNumber" />
+                        <asp:BoundField DataField="ITSupportTechnicianSpecialty" HeaderText="Specialty" SortExpression="ITSupportTechnicianSpecialty" />
+                        <asp:BoundField DataField="AccountCreationTime" HeaderText="Account Creation Time" SortExpression="AccountCreationTime" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -39,7 +46,7 @@
                 </asp:GridView>
             </div>
             <div class="row p-4">
-                <asp:SqlDataSource ID="sql_ITSupport_Technicians" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TechnicianID], [TechnicianFirstName], [TechnicianLastName], [TechnicianEmail], [TechnicianPhoneNumber], [TechnicianSpecialty], [AccountCreationTime] FROM [TechnicianAccount]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sql_ITSupport_Technicians" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [ITSupportTechnicianID], [ITSupportTechnicianFirstName], [ITSupportTechnicianLastName], [ITSupportTechnicianUsername], [ITSupportTechnicianEmail], [ITSupportTechnicianPhoneNumber], [ITSupportTechnicianSpecialty], [AccountCreationTime] FROM [ITSupportTechnicianAccount]"></asp:SqlDataSource>
                 <br />
             </div>
             <div class="row p-4">

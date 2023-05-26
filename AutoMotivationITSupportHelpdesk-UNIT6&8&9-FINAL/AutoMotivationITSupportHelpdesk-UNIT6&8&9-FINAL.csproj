@@ -115,6 +115,7 @@
     <Content Include="Webpages\Default\Default.aspx" />
     <Content Include="Webpages\GeneralEmployee\CreateNewGeneralEmployeeAccount\CreateNewGeneralEmployeeAccount.aspx" />
     <Content Include="Webpages\GeneralEmployee\CreateNewITSupportTicket\CreateNewITSupportTicket.aspx" />
+    <Content Include="Webpages\GeneralEmployee\GeneralEmployeeChangeAccount\GeneralEmployeeChangeAccount.aspx" />
     <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\exit.png" />
     <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\GeneralEmployeePortal.aspx" />
     <Content Include="Webpages\GeneralEmployee\GeneralEmployeePortal\magnifier_search_zoom_icon.png" />
@@ -185,6 +186,13 @@
     </Compile>
     <Compile Include="Webpages\GeneralEmployee\CreateNewITSupportTicket\CreateNewITSupportTicket.aspx.designer.cs">
       <DependentUpon>CreateNewITSupportTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webpages\GeneralEmployee\GeneralEmployeeChangeAccount\GeneralEmployeeChangeAccount.aspx.cs">
+      <DependentUpon>GeneralEmployeeChangeAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpages\GeneralEmployee\GeneralEmployeeChangeAccount\GeneralEmployeeChangeAccount.aspx.designer.cs">
+      <DependentUpon>GeneralEmployeeChangeAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Webpages\GeneralEmployee\GeneralEmployeePortal\GeneralEmployeePortal.aspx.cs">
       <DependentUpon>GeneralEmployeePortal.aspx</DependentUpon>

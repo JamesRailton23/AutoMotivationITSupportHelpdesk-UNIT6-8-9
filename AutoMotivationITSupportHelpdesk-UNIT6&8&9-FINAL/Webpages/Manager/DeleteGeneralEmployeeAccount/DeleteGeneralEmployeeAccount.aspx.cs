@@ -18,5 +18,19 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
         {
             Response.Redirect("../ManagerPortal/ManagerPortal.aspx");
         }
+
+        protected void btn_Delete_General_Employee_Click(object sender, EventArgs e)
+        {
+            deleteEmployeeAccount();
+        }
+
+        protected void deleteEmployeeAccount()
+        {
+            var helpdeskDatabase = new AutoMotivationITSupportHelpdeskDatabaseEntities();
+            var GeneralEmployee = helpdeskDatabase.GeneralEmployeeAccounts.Find(Convert.ToInt32(gv_Gerneral_Employees_Accounts.SelectedValue));
+            helpdeskDatabase.GeneralEmployeeAccounts.Remove(GeneralEmployee);
+            helpdeskDatabase.SaveChanges();
+            gv_Gerneral_Employees_Accounts.DataBind();
+        }
     }
 }

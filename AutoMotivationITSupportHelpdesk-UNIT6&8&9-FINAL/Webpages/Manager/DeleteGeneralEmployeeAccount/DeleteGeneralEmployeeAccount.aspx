@@ -17,13 +17,20 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold" style="font-family: 'IBM Plex Sans', sans-serif;">Delete General users</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_Gerneral_Employees_Accounts" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="sql_general_users">
+                <asp:GridView ID="gv_Gerneral_Employees_Accounts" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="GeneralEmployeeID" DataSourceID="sql_General_Employees" AllowPaging="True">
                     <Columns>
-                        <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
-                        <asp:BoundField DataField="UserFirstName" HeaderText="First Name" SortExpression="UserFirstName" />
-                        <asp:BoundField DataField="UserLastName" HeaderText="Last Name" SortExpression="UserLastName" />
-                        <asp:BoundField DataField="UserEmail" HeaderText="Email" SortExpression="UserEmail" />
-                        <asp:BoundField DataField="UserPhoneNumber" HeaderText="Phone Number" SortExpression="UserPhoneNumber" />
+                        <asp:CommandField ButtonType="Button" SelectText="SELECT" ShowSelectButton="True" HeaderText="SelectEmployee" />
+                        <asp:TemplateField HeaderText="DeleteEmployee">
+                            <ItemTemplate>
+                                <asp:Button ID="btn_Delete_General_Employee" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_Delete_General_Employee_Click"/>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="GeneralEmployeeID" HeaderText="EmployeeID" InsertVisible="False" ReadOnly="True" SortExpression="GeneralEmployeeID" />
+                        <asp:BoundField DataField="GeneralEmployeeFirstName" HeaderText="EmployeeFirstName" SortExpression="GeneralEmployeeFirstName" />
+                        <asp:BoundField DataField="GeneralEmployeeLastName" HeaderText="EmployeeLastName" SortExpression="GeneralEmployeeLastName" />
+                        <asp:BoundField DataField="GeneralEmployeeUsername" HeaderText="EmployeeUsername" SortExpression="GeneralEmployeeUsername" />
+                        <asp:BoundField DataField="GeneralEmployeeEmail" HeaderText="EmployeeEmail" SortExpression="GeneralEmployeeEmail" />
+                        <asp:BoundField DataField="GeneralEmployeePhoneNumber" HeaderText="EmployeePhoneNumber" SortExpression="GeneralEmployeePhoneNumber" />
                         <asp:BoundField DataField="AccountCreationTime" HeaderText="AccountCreationTime" SortExpression="AccountCreationTime" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
@@ -43,7 +50,7 @@
 
             </div>
         </div>
-        <asp:SqlDataSource ID="sql_General_Employees" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [UserID], [UserFirstName], [UserLastName], [UserEmail], [UserPhoneNumber], [AccountCreationTime] FROM [GeneralUserAccount]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sql_General_Employees" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [GeneralEmployeeID], [GeneralEmployeeFirstName], [GeneralEmployeeLastName], [GeneralEmployeeUsername], [GeneralEmployeeEmail], [GeneralEmployeePhoneNumber], [AccountCreationTime] FROM [GeneralEmployeeAccount]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
