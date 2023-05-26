@@ -13,5 +13,30 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Manag
         {
 
         }
+
+        protected void btn_viewticket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_createaccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_deletetechnican_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_deletgeneraluser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

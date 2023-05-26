@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -40,22 +40,9 @@
                      <SortedDescendingHeaderStyle BackColor="#383838" />
                  </asp:GridView>
             </div>
-           <div class="row p-4 bg-white rounded-top">
-                <h3>Add comments to existing tickets by selecting the ticket ID from the dropdown box and then adding the comment into the comment text box then press button "Add Comment" or delete tickets By selecting ticketID from dropdown box and then press button labled "Delete"</h3>
-               <br />
-               <asp:DropDownList ID="ddl_ticketID" runat="server" DataSourceID="sql_tickets" DataTextField="SupportTicketID" DataValueField="SupportTicketID"></asp:DropDownList>
-               <br />
-               <asp:TextBox ID="tbx_comments" runat="server" CssClass="form-control" placeholder="Comments"></asp:TextBox>
-                <br />
-                <asp:Button ID="btn_addcomments" runat="server" Text="ADD COMMENTS" CssClass="btn btn-secondary" OnClick="btn_addcomments_Click"/>
-             </div>
-           <div class="row p-4 bg-white">
-                <br />
-                <asp:Button ID="btn_delete" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_delete_Click"/>
-             </div>
-            <div class="row p-4 bg-white rounded-bottom">
+           <div class="row p-4 bg-white rounded-bottom">
                 <h3>Return back to IT Support technician portal</h3>
-                <asp:Button ID="btn_portalreturn" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_portalreturn_Click"/>
+                <asp:Button ID="btn_ITSupport_Technician_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_ITSupport_Technician_Portal_Return_Click"/>
         </div>
          </div>
         <asp:SqlDataSource ID="sql_tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [SupportTicket] WHERE ([TechnicianID] = @TechnicianID)">

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-decoration-underline fw-bold">Tickets</h5>
                             <p>List of all the tickets within the system</p>
-                            <asp:GridView ID="gv_tickets" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets" ForeColor="Black" HorizontalAlign="Center">
+                            <asp:GridView ID="gv_Tickets" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets" ForeColor="Black" HorizontalAlign="Center">
                                 <Columns>
                                     <asp:BoundField DataField="SupportTicketID" HeaderText="SupportTicketID" InsertVisible="False" ReadOnly="True" SortExpression="SupportTicketID" />
                                     <asp:BoundField DataField="TicketPriority" HeaderText="TicketPriority" SortExpression="TicketPriority" />
@@ -45,19 +45,7 @@
                         </div>
                     </div>
                     <div class="card text-center my-2" style="width: 70rem;">
-                        <div class="card-body">
-                            <h5 class="card-title text-decoration-underline fw-bold">Assign Tickets</h5>
-                            <p>Select a ticket from the drop down box and click the assign button</p>
-                            <div class="row align-content-center justify-content-center">
-                                <div class="col-6">
-                                    <asp:DropDownList ID="ddl_tickets" runat="server" CssClass="form-select" DataSourceID="sql_tickets" DataTextField="SupportTicketID" DataValueField="SupportTicketID"></asp:DropDownList>
-                                </div>
-                                <div class="col-6">
-                                    <asp:Button ID="btn_assignTickets" runat="server" CssClass="btn btn-outline-success" Text="ASSIGN TICKET" OnClick="btn_assignTickets_Click"/>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
+                    </div>
                             <br />
                             <br />
                             <br />
@@ -65,7 +53,7 @@
                             <div class="card text-center my-2" style="width: 70rem;">
                                 <div class="row align-content-center justify-content-center p-4">
                                     <h3>Return back to IT Support technician portal</h3>
-                                    <asp:Button ID="btn_portalreturn" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_portalreturn_Click" />
+                                    <asp:Button ID="btn_ITSupport_Technician_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_ITSupport_Technician_Portal_Return_Click"/>
                                 </div>
                             </div>
                         </div>

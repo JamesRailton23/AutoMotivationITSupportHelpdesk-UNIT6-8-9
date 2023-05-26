@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold" style="font-family: 'IBM Plex Sans', sans-serif;">Delete General users</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_users" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="sql_general_users">
+                <asp:GridView ID="gv_Gerneral_Employees" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="UserID" DataSourceID="sql_general_users">
                     <Columns>
                         <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />
                         <asp:BoundField DataField="UserFirstName" HeaderText="First Name" SortExpression="UserFirstName" />
@@ -38,17 +38,8 @@
                 </asp:GridView>
             </div>
             <div class="row p-4">
-                <h3>Delete general users By selecting userID from dropdown box and then press button labeled "Delete"</h3>
-                <br />
-                <asp:DropDownList ID="ddl_deleteID" runat="server" DataSourceID="sql_general_users" DataTextField="UserID" DataValueField="UserID"></asp:DropDownList>
-                <br />
-                <asp:Button ID="btn_delete" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_delete_Click" />
-                <br />
-                <br />
-            </div>
-            <div class="row p-4">
                 <h3>Return back to manager portal</h3>
-                <asp:Button ID="btn_portalreturn" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_portalreturn_Click" />
+                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" />
 
             </div>
         </div>

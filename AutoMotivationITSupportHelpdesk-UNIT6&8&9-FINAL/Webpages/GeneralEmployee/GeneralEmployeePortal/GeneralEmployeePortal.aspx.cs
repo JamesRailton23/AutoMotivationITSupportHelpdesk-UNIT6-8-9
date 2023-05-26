@@ -13,5 +13,20 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
         {
 
         }
+
+        protected void btn_New_Support_Ticket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_View_Tickets_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_Logout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,5 +13,20 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         {
 
         }
+
+        protected void btn_Logout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_Technicians_Assign_Tickets_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_View_Assigned_Tickets_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

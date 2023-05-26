@@ -24,30 +24,30 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Default
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// img_logo control.
+        /// img_Logo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img_logo;
+        protected global::System.Web.UI.WebControls.Image img_Logo;
 
         /// <summary>
-        /// btn_login control.
+        /// btn_Account_Login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_login;
+        protected global::System.Web.UI.WebControls.Button btn_Account_Login;
 
         /// <summary>
-        /// btn_create_Account control.
+        /// btn_General_Employee_Create_Account control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_create_Account;
+        protected global::System.Web.UI.WebControls.Button btn_General_Employee_Create_Account;
     }
 }

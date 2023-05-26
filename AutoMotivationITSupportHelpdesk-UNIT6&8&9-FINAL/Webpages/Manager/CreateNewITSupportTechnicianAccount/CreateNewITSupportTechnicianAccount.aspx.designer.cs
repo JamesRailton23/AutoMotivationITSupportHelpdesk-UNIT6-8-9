@@ -24,75 +24,75 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Creat
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// tbx_first_name control.
+        /// tbx_First_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_first_name;
+        protected global::System.Web.UI.WebControls.TextBox tbx_First_Name;
 
         /// <summary>
-        /// tbx_last_name control.
+        /// tbx_Last_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_last_name;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Last_Name;
 
         /// <summary>
-        /// tbx_username control.
+        /// tbx_Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_username;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Username;
 
         /// <summary>
-        /// tbx_password control.
+        /// tbx_Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_password;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Password;
 
         /// <summary>
-        /// tbx_email control.
+        /// tbx_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_email;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Email;
 
         /// <summary>
-        /// tbx_phone_Number control.
+        /// tbx_Phone_Number control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_phone_Number;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Phone_Number;
 
         /// <summary>
-        /// tbx_specialty control.
+        /// tbx_Technician_Specialty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_specialty;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Technician_Specialty;
 
         /// <summary>
-        /// btn_createAccount control.
+        /// btn_Create_Technician_Account control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_createAccount;
+        protected global::System.Web.UI.WebControls.Button btn_Create_Technician_Account;
     }
 }

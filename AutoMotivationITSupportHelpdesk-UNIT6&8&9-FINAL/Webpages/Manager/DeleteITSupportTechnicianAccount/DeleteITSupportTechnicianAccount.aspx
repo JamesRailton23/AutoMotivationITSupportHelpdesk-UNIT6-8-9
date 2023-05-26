@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../../../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -39,19 +39,12 @@
                 </asp:GridView>
             </div>
             <div class="row p-4">
-                <h3>Delete technicians By selecting their ID number from dropdown box and then press button labled "Delete"</h3>
-                <br />
-                <asp:DropDownList ID="ddl_deleteID" runat="server" DataSourceID="sql_technicans" DataTextField="TechnicianID" DataValueField="TechnicianID"></asp:DropDownList>
-                <br />
-                <asp:Button ID="btn_delete" runat="server" Text="DELETE" CssClass="btn btn-danger" OnClick="btn_delete_Click" />
-                <br />
                 <asp:SqlDataSource ID="sql_technicans" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [TechnicianID], [TechnicianFirstName], [TechnicianLastName], [TechnicianEmail], [TechnicianPhoneNumber], [TechnicianSpecialty], [AccountCreationTime] FROM [TechnicianAccount]"></asp:SqlDataSource>
                 <br />
             </div>
             <div class="row p-4">
                 <h3>Return back to manager portal</h3>
-                <asp:Button ID="btn_portalreturn" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" OnClick="btn_portalreturn_Click" />
-
+                <asp:Button ID="btn_Manager_Portal_Return" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-secondary" />
             </div>
         </div>
     </form>

@@ -24,13 +24,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lb_name control.
+        /// lb_Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_name;
+        protected global::System.Web.UI.WebControls.Label lb_Username;
 
         /// <summary>
         /// img_Ticket control.
@@ -42,13 +42,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.WebControls.Image img_Ticket;
 
         /// <summary>
-        /// btn_viewTicket control.
+        /// btn_View_Assigned_Tickets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_viewTicket;
+        protected global::System.Web.UI.WebControls.Button btn_View_Assigned_Tickets;
 
         /// <summary>
         /// img_Assign control.
@@ -60,30 +60,30 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.WebControls.Image img_Assign;
 
         /// <summary>
-        /// btn_assign control.
+        /// btn_Technicians_Assign_Tickets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_assign;
+        protected global::System.Web.UI.WebControls.Button btn_Technicians_Assign_Tickets;
 
         /// <summary>
-        /// img_logo control.
+        /// img_Logo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img_logo;
+        protected global::System.Web.UI.WebControls.Image img_Logo;
 
         /// <summary>
-        /// btn_logout control.
+        /// btn_Logout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_logout;
+        protected global::System.Web.UI.WebControls.Button btn_Logout;
     }
 }

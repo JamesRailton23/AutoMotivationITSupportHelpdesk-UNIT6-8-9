@@ -33,24 +33,6 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
         protected global::System.Web.UI.WebControls.GridView gv_technicians;
 
         /// <summary>
-        /// ddl_deleteID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_deleteID;
-
-        /// <summary>
-        /// btn_delete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_delete;
-
-        /// <summary>
         /// sql_technicans control.
         /// </summary>
         /// <remarks>
@@ -60,12 +42,12 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
         protected global::System.Web.UI.WebControls.SqlDataSource sql_technicans;
 
         /// <summary>
-        /// btn_portalreturn control.
+        /// btn_Manager_Portal_Return control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_portalreturn;
+        protected global::System.Web.UI.WebControls.Button btn_Manager_Portal_Return;
     }
 }

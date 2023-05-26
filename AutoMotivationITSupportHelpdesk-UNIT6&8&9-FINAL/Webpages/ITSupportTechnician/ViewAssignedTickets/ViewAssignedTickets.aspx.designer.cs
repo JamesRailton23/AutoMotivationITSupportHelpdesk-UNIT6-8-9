@@ -33,49 +33,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.WebControls.GridView gv_yourtickets;
 
         /// <summary>
-        /// ddl_ticketID control.
+        /// btn_ITSupport_Technician_Portal_Return control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_ticketID;
-
-        /// <summary>
-        /// tbx_comments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_comments;
-
-        /// <summary>
-        /// btn_addcomments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_addcomments;
-
-        /// <summary>
-        /// btn_delete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_delete;
-
-        /// <summary>
-        /// btn_portalreturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_portalreturn;
+        protected global::System.Web.UI.WebControls.Button btn_ITSupport_Technician_Portal_Return;
 
         /// <summary>
         /// sql_tickets control.

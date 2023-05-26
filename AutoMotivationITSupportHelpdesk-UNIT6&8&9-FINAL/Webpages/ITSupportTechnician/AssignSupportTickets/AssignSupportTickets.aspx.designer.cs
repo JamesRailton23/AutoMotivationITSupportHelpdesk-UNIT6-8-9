@@ -24,13 +24,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// gv_tickets control.
+        /// gv_Tickets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_tickets;
+        protected global::System.Web.UI.WebControls.GridView gv_Tickets;
 
         /// <summary>
         /// sql_tickets control.
@@ -42,30 +42,12 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
         protected global::System.Web.UI.WebControls.SqlDataSource sql_tickets;
 
         /// <summary>
-        /// ddl_tickets control.
+        /// btn_ITSupport_Technician_Portal_Return control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_tickets;
-
-        /// <summary>
-        /// btn_assignTickets control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_assignTickets;
-
-        /// <summary>
-        /// btn_portalreturn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_portalreturn;
+        protected global::System.Web.UI.WebControls.Button btn_ITSupport_Technician_Portal_Return;
     }
 }

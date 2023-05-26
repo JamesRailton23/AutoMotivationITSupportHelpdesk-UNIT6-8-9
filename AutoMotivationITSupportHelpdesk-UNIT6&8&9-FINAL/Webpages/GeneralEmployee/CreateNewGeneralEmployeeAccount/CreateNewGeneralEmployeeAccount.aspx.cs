@@ -13,5 +13,10 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
         {
 
         }
+
+        protected void btn_Submit_General_Employee_Account_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

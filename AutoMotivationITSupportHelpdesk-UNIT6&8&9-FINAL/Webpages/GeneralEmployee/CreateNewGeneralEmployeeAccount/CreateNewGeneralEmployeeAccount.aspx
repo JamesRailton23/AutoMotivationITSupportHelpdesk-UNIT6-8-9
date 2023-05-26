@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <div class="container my-5 bg-dark rounded shadow p-5" style="font-family: 'IBM Plex Sans', sans-serif; background-color: #d3d3d3">
             <div class="row p-5 shadow rounded text-center justify-content-center align-content-center bg-white">
-                <div class="row bg-dark text-white mb-5  rounded">
+                <div class="row bg-dark text-white mb-5 rounded">
                     <div class="col text-center p-3">
                         <h1 class="fw-bold">Create Account</h1>
                     </div>
@@ -22,35 +22,35 @@
                 <div class="row bg-dark text-white p-3 rounded-top">
                     <div class="col">
                         <h3 class="form-label text-center">First name</h3>
-                        <asp:TextBox ID="tbx_first_name" runat="server" CssClass="form-control" placeholder="First Name"></asp:TextBox>
+                        <asp:TextBox ID="tbx_First_Name" runat="server" CssClass="form-control" placeholder="First Name"></asp:TextBox>
                     </div>
                     <div class="col">
                         <h3 class="form-label text-center">Last Name</h3>
-                        <asp:TextBox ID="tbx_last_name" runat="server" CssClass="form-control" placeholder="Last Name"></asp:TextBox>
+                        <asp:TextBox ID="tbx_Last_Name" runat="server" CssClass="form-control" placeholder="Last Name"></asp:TextBox>
                     </div>
                 </div>
                 <div class="row bg-dark text-white p-3 ">
                     <div class="col">
                         <h3 class="form-label">Username</h3>
-                        <asp:TextBox ID="tbx_username" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>
+                        <asp:TextBox ID="tbx_Username" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>
                     </div>
                     <div class="col">
                         <h3 class="form-label">Password</h3>
-                        <asp:TextBox ID="tbx_password" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                        <asp:TextBox ID="tbx_Password" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
                     </div>
                 </div>
                 <div class="row bg-dark text-white p-3 rounded-bottom">
                     <div class="col">
                         <h3 class="form-label">Email</h3>
-                        <asp:TextBox ID="tbx_email" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                        <asp:TextBox ID="tbx_Email" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
                     </div>
                     <div class="col">
                         <h3 class="form-label text-center">Phone Number</h3>
-                        <asp:TextBox ID="tbx_phone_Number" runat="server" CssClass="form-control" placeholder="Phone Number"></asp:TextBox>
+                        <asp:TextBox ID="tbx_Phone_Number" runat="server" CssClass="form-control" placeholder="Phone Number"></asp:TextBox>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center">
-                    <asp:Button ID="btn_createAccount" runat="server" Text="CREATE ACCOUNT" CssClass="btn btn-success btn-lg my-5" Width="550" Height="60" OnClick="btn_createAccount_Click" />
+                    <asp:Button ID="btn_Submit_General_Employee_Account" runat="server" Text="CREATE ACCOUNT" CssClass="btn btn-success btn-lg my-5" Width="550" Height="60" OnClick="btn_Submit_General_Employee_Account_Click"/>
                 </div>
             </div>
         </div>

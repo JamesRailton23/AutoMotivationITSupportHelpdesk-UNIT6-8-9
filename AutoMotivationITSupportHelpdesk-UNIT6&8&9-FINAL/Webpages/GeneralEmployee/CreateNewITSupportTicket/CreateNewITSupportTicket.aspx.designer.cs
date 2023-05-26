@@ -24,48 +24,48 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// tbx_issue_subject control.
+        /// tbx_Issue_Subject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_issue_subject;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Issue_Subject;
 
         /// <summary>
-        /// ddl_category control.
+        /// ddl_Category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_category;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Category;
 
         /// <summary>
-        /// tbx_issue_priorty control.
+        /// tbx_Issue_Priorty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_issue_priorty;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Issue_Priorty;
 
         /// <summary>
-        /// tbx_issue_description control.
+        /// tbx_Issue_Description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbx_issue_description;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Issue_Description;
 
         /// <summary>
-        /// btn_submit control.
+        /// btn_Submit_Support_Ticket control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_submit;
+        protected global::System.Web.UI.WebControls.Button btn_Submit_Support_Ticket;
     }
 }

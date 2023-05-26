@@ -16,16 +16,16 @@
             <h1 class="lead text-center display-3 p-4 bg-white rounded fw-bold">AutoMotivation - IT Support Helpdesk</h1>
         </div>
         <div class="row p-4 justify-content-center">
-            <asp:Image ID="img_logo" runat="server" ImageUrl="automotivation-high-resolution-logo-white-on-black-background.png" Width="500" Height="500" />
+            <asp:Image ID="img_Logo" runat="server" ImageUrl="automotivation-high-resolution-logo-white-on-black-background.png" Width="500" Height="500" />
         </div>
         <div class="row p-4 lead text-center display-3 p-4 bg-white rounded fw-bold">
             <h1 class="">Login or Create Account Below</h1>
             <div class="row justify-content-center">
                 <div class="col">
-                    <asp:Button ID="btn_login" runat="server" Text="HELPDESK LOGIN" class="btn btn-secondary" Width="250" Height="50" OnClick="btn_login_Click" />
+                    <asp:Button ID="btn_Account_Login" runat="server" Text="HELPDESK LOGIN" class="btn btn-secondary" Width="250" Height="50" OnClick="btn_Account_Login_Click"/>
                 </div>
                 <div class="col">
-                    <asp:Button ID="btn_create_Account" runat="server" Text="CREATE ACCOUNT" class="btn btn-secondary" Width="250" Height="50" OnClick="btn_create_Account_Click" />
+                    <asp:Button ID="btn_General_Employee_Create_Account" runat="server" Text="CREATE GENERAL EMPLOYEE ACCOUNT" class="btn btn-secondary" Width="250" Height="50" OnClick="btn_General_Employee_Create_Account_Click"/>
                 </div>
             </div>
         </div>

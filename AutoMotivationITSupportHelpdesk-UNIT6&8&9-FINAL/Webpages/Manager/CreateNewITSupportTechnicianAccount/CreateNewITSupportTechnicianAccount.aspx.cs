@@ -13,5 +13,10 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Creat
         {
 
         }
+
+        protected void btn_Create_Technician_Account_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
