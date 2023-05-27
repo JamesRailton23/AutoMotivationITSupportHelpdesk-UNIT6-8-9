@@ -69,6 +69,24 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
         protected global::System.Web.UI.WebControls.Button btn_View_Tickets;
 
         /// <summary>
+        /// img_change_account control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_change_account;
+
+        /// <summary>
+        /// btn_Change_Account_Details control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Change_Account_Details;
+
+        /// <summary>
         /// img_AutoMotivation_Logo control.
         /// </summary>
         /// <remarks>

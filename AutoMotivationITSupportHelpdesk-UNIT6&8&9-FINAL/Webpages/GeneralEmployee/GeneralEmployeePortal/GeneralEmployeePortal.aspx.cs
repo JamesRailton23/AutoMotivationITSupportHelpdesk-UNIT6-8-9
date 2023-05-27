@@ -11,7 +11,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lb_Username.Text = Session["GeneralEmployeeUsername"].ToString();
+            //lb_Username.Text = Session["GeneralEmployeeUsername"].ToString();
         }
 
         protected void btn_New_Support_Ticket_Click(object sender, EventArgs e)
@@ -28,6 +28,11 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
         {
             Response.Redirect("~/Webpages/Default/Default.aspx");
             Session.Abandon();
+        }
+
+        protected void btn_Change_Account_Details_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
