@@ -11,7 +11,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Manag
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lb_name.Text = Session["ManagerID"].ToString();
         }
 
         protected void btn_View_All_Tickets_Click(object sender, EventArgs e)

@@ -17,17 +17,17 @@
                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold">Tickets</h1>
             </div>
             <div class="row p-4 justify-content-center">
-                <asp:GridView ID="gv_All_Support_Tickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="SupportTicketID" DataSourceID="sql_tickets">
+                <asp:GridView ID="gv_All_Support_Tickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="ITSupportTicketID" DataSourceID="sql_ITSupport_Tickets">
                     <Columns>
-                        <asp:BoundField DataField="SupportTicketID" HeaderText="SupportTicketID" InsertVisible="False" ReadOnly="True" SortExpression="SupportTicketID" />
-                        <asp:BoundField DataField="TicketPriority" HeaderText="Priority" SortExpression="TicketPriority" />
-                        <asp:BoundField DataField="TicketCategory" HeaderText="Category" SortExpression="TicketCategory" />
-                        <asp:BoundField DataField="TicketSubject" HeaderText="Subject" SortExpression="TicketSubject" />
-                        <asp:BoundField DataField="TicketDescription" HeaderText="Description" SortExpression="TicketDescription" />
-                        <asp:BoundField DataField="CreationTime" HeaderText="CreationTime" SortExpression="CreationTime" />
-                        <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
-                        <asp:BoundField DataField="TechnicianID" HeaderText="TechnicianID" SortExpression="TechnicianID" />
-                        <asp:BoundField DataField="TicketComments" HeaderText="Comments" SortExpression="TicketComments" />
+                        <asp:BoundField DataField="ITSupportTicketID" HeaderText="TicketID" InsertVisible="False" ReadOnly="True" SortExpression="ITSupportTicketID" />
+                        <asp:BoundField DataField="GeneralEmployeeID" HeaderText="EmployeeID" SortExpression="GeneralEmployeeID" />
+                        <asp:BoundField DataField="ITSupportTechnicianID" HeaderText="TechnicianID" SortExpression="ITSupportTechnicianID" />
+                        <asp:BoundField DataField="ITSupportTicketPriority" HeaderText="Priority" SortExpression="ITSupportTicketPriority" />
+                        <asp:BoundField DataField="ITSupportTicketCategory" HeaderText="Category" SortExpression="ITSupportTicketCategory" />
+                        <asp:BoundField DataField="ITSupportTicketSubject" HeaderText="Subject" SortExpression="ITSupportTicketSubject" />
+                        <asp:BoundField DataField="ITSupportTicketDescription" HeaderText="Description" SortExpression="ITSupportTicketDescription" />
+                        <asp:BoundField DataField="ITSupportTicketCreationTime" HeaderText="CreationTime" SortExpression="ITSupportTicketCreationTime" />
+                        <asp:BoundField DataField="ITSupportTicketComments" HeaderText="Comments" SortExpression="ITSupportTicketComments" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -46,7 +46,7 @@
             </div>
         </div>
         <br />
-        <asp:SqlDataSource ID="sql_ITSupport_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [SupportTicket]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sql_ITSupport_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ITSupportTicket]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

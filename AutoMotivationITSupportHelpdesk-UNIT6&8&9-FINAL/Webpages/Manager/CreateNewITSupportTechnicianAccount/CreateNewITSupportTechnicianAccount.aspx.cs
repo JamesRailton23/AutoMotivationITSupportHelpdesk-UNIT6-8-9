@@ -35,6 +35,16 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Creat
             ITSupportTechnician.AccountCreationTime = DateTime.Now;
             ITSupportTechnicianAccount.Add(ITSupportTechnician);
             HelpdeskDatabase.SaveChanges();
+            tbx_First_Name.Enabled = false;
+            tbx_Last_Name.Enabled = false;
+            tbx_Username.Enabled = false;
+            tbx_Password.Enabled = false;
+            tbx_Email.Enabled = false;
+            tbx_Phone_Number.Enabled = false;
+            tbx_Technician_Specialty.Enabled = false;
+            btn_Create_Technician_Account.Enabled = false;
+
+
         }
     }
 }

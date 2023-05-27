@@ -13,12 +13,13 @@
 <body>
     <form id="form1" runat="server">
        <div class="container my-5 bg-dark rounded shadow p-5" style="font-family: 'IBM Plex Sans', sans-serif; background-color:#d3d3d3">
-             <div class="row p-4">
-                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold">Your Tickets</h1>
-                 <br/>
-                 <h3>Add comments to existing tickets by selecting the ticket ID from the gridiview and then adding the comment into the comment text box then press button "Add Comment" or delete tickets By selecting ticket from gridview and then press button labled "Delete"</h3>
+             <div class="row p-4 rounded">
+                 <h1 class="lead text-center display-5 p-4 bg-white rounded fw-bold">Your Assigned Tickets</h1>
              </div>
-             <div class="row p-4 justify-content-center">
+           <div class="row p-4 bg-white rounded">
+                <h3>Add comments to existing tickets by selecting the ticket ID from the gridiview and then adding the comment into the comment text box then press button "Add Comment" or delete tickets By selecting ticket from gridview and then press button labled "Delete"</h3>
+                </div>
+           <div class="row p-4 justify-content-center">
                  <asp:GridView ID="gv_Your_Assigned_Tickets" runat="server" CssClass=" justify-content-center align-content-center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AutoGenerateColumns="False" DataKeyNames="ITSupportTicketID" DataSourceID="sql_Support_Tickets" AllowPaging="True">
                      <Columns>
                          <asp:CommandField ButtonType="Button" ShowSelectButton="True" SelectText="SELECT" HeaderText="SelectTicket" >

@@ -132,6 +132,10 @@
     <Content Include="Webpages\Manager\CreateNewITSupportTechnicianAccount\CreateNewITSupportTechnicianAccount.aspx" />
     <Content Include="Webpages\Manager\DeleteGeneralEmployeeAccount\DeleteGeneralEmployeeAccount.aspx" />
     <Content Include="Webpages\Manager\DeleteITSupportTechnicianAccount\DeleteITSupportTechnicianAccount.aspx" />
+    <Content Include="Webpages\Manager\ManagerPortal\createAccount.png" />
+    <Content Include="Webpages\Manager\ManagerPortal\deleteAccount.png" />
+    <Content Include="Webpages\Manager\ManagerPortal\exit.png" />
+    <Content Include="Webpages\Manager\ManagerPortal\magnifier_search_zoom_icon.png" />
     <Content Include="Webpages\Manager\ManagerPortal\ManagerPortal.aspx" />
     <Content Include="Webpages\Manager\ViewAllSubmittedTickets\ViewAllSubmittedTickets.aspx" />
   </ItemGroup>

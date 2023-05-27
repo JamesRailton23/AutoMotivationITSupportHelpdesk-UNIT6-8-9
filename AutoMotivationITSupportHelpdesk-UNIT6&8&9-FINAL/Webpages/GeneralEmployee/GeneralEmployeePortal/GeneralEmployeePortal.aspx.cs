@@ -32,7 +32,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
 
         protected void btn_Change_Account_Details_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Webpages/GeneralEmployee/GeneralEmployeeChangeAccount/GeneralEmployeeChangeAccount.aspx");
         }
     }
 }

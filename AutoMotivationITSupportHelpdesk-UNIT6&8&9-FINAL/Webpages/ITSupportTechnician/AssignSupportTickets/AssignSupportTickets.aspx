@@ -54,9 +54,7 @@
                             <asp:SqlDataSource ID="sql_Support_Tickets" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [ITSupportTicket]"></asp:SqlDataSource>
                         </div>
                     </div>
-                    <div class="card text-center my-2" style="width: 70rem;">
-                    </div>
-                            <br />
+                    <br />
                             <br />
                             <br />
                             <br />
