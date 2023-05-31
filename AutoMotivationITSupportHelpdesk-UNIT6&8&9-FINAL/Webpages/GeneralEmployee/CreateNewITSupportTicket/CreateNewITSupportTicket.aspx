@@ -28,15 +28,25 @@
                     <div class="card text-center my-2" style="width: 50rem;">
                         <div class="card-body">
                             <h5 class="card-title text-decoration-underline fw-bold">Category of issue</h5>
-                            <p>please state the category of the issue that you are having</p>
-                            <asp:TextBox ID="tbx_Issue_Category" runat="server" CssClass="form-control form-control-lg" />
+                            <p>please select the category of the issue that you are having</p>
+                            <asp:DropDownList ID="ddl_category" runat="server" CssClass="form-control">
+                                <asp:ListItem>Hardware</asp:ListItem>
+                                <asp:ListItem>Software</asp:ListItem>
+                                <asp:ListItem>Network</asp:ListItem>
+                                <asp:ListItem>Other</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                     </div>
                     <div class="card text-center my-2" style="width: 50rem;">
                         <div class="card-body">
                             <h5 class="card-title text-decoration-underline fw-bold">Priority of this issue</h5>
-                            <p>please state the priority of this issue, Type "L" for Low, "M" for Medium or "H" for high</p>
-                            <asp:TextBox ID="tbx_Issue_Priority" runat="server" CssClass="form-control form-control-lg" />
+                            <p>please select the priority of this issue</p>
+                            <asp:DropDownList ID="ddl_priority" runat="server" CssClass="form-control">
+                                <asp:ListItem>Low</asp:ListItem>
+                                <asp:ListItem>Medium</asp:ListItem>
+                                <asp:ListItem>High</asp:ListItem>
+                                <asp:ListItem>ASAP</asp:ListItem>
+                            </asp:DropDownList>
                         </div>
                     </div>
                 </div>

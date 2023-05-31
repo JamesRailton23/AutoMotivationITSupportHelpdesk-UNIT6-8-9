@@ -8,7 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-</head>
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Fotorama from CDNJS, 19 KB -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    </head>
 <body>
 <form id="form1" runat="server">
     <div class="container my-5 bg-dark rounded shadow p-5" style="font-family: 'IBM Plex Sans', sans-serif; background-color: #d3d3d3">
@@ -16,7 +21,14 @@
             <h1 class="lead text-center display-3 p-4 bg-white rounded fw-bold">AutoMotivation - IT Support Helpdesk</h1>
         </div>
         <div class="row p-4 justify-content-center">
-            <asp:Image ID="img_Logo" runat="server" ImageUrl="automotivation-high-resolution-logo-white-on-black-background.png" Width="500" Height="500" />
+            <div class="fotorama" data-autoplay="5000" data-nav="false" data-width="100%" data-ratio="800/600" data-arrows="false" data-stopautoplayontouch="false" data-loop="true" data-swipe="false" data-transitionduration="3000">
+                        <img src="automotivation-high-resolution-logo-white-on-black-background.png">
+                        <img src="details.png">
+                        <img src="loginpage.png">
+                        <img src="portal.png">
+                        <img src="ticket.png">
+                        <img src="viewing.png">
+                    </div>
         </div>
         <div class="row p-4 lead text-center display-3 p-4 bg-white rounded fw-bold">
             <h1 class="">Login or Create Account Below</h1>

@@ -40,6 +40,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Login
                     if (generalEmployee.GeneralEmployeeUsername == tbx_Username.Text.Trim() && generalEmployee.GeneralEmployeePassword == tbx_Password.Text.Trim())
                     {
                         Session["GeneralEmployeeUsername"] = generalEmployee.GeneralEmployeeUsername;
+                        Session["GeneralEmployeePhoneNumber"] = generalEmployee.GeneralEmployeePhoneNumber;
                         Session["GeneralEmployeeID"] = generalEmployee.GeneralEmployeeID;
                         Response.Redirect("../GeneralEmployee/GeneralEmployeePortal/GeneralEmployeePortal.aspx");
                     }
@@ -49,6 +50,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Login
                     if (ITSupportTechnician.ITSupportTechnicianUsername == tbx_Username.Text.Trim() && ITSupportTechnician.ITSupportTechnicianPassword == tbx_Password.Text.Trim())
                     {
                         Session["ITSupportTechnicianUsername"] = ITSupportTechnician.ITSupportTechnicianUsername;
+                        Session["ITSupportTechnicianPhoneNumber"] = ITSupportTechnician.ITSupportTechnicianPhoneNumber;
                         Session["ITSupportTechnicianID"] = ITSupportTechnician.ITSupportTechnicianID;
                         Response.Redirect("../ITSupportTechnician/ITSupportTechnicianPortal/ITSupportTechnicianPortal.aspx");
                     }
@@ -58,6 +60,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Login
                     if (manager.ManagerUsername == tbx_Username.Text.Trim() && manager.ManagerPassword == tbx_Password.Text.Trim())
                     {
                         Session["ManagerUsername"] = manager.ManagerUsername;
+                        Session["ManagerPhoneNumber"] = manager.ManagerPhoneNumber;
                         Session["ManagerID"] = manager.ManagerID;
                         Response.Redirect("../Manager/ManagerPortal/ManagerPortal.aspx");
                     }
