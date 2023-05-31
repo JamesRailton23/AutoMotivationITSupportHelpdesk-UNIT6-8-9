@@ -31,6 +31,9 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
             helpdeskDatabase.GeneralEmployeeAccounts.Remove(GeneralEmployee);
             helpdeskDatabase.SaveChanges();
             gv_Gerneral_Employees_Accounts.DataBind();
+            string alertmessage = "alert('General Employee Account Deleted Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
+
         }
     }
 }

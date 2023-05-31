@@ -33,13 +33,13 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
         protected global::System.Web.UI.WebControls.TextBox tbx_Issue_Subject;
 
         /// <summary>
-        /// ddl_Category control.
+        /// tbx_Issue_Category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_Category;
+        protected global::System.Web.UI.WebControls.TextBox tbx_Issue_Category;
 
         /// <summary>
         /// tbx_Issue_Priority control.

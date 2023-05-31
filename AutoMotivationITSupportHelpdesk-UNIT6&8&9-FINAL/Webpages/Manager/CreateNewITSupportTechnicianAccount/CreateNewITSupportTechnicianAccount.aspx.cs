@@ -43,6 +43,8 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Creat
             tbx_Phone_Number.Enabled = false;
             tbx_Technician_Specialty.Enabled = false;
             btn_Create_Technician_Account.Enabled = false;
+            string alertmessage = "alert('New IT Support Technician Account Created Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
 
 
         }

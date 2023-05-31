@@ -31,6 +31,9 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
             ITSupportTicket.ITSupportTechnicianID = ITSupportTechnicianID;
             helpdeskDatabase.SaveChanges();
             gv_Tickets.DataBind();
+
+            string alertmessage = "alert('IT Support Ticket Assigned Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
         }
     }
 }

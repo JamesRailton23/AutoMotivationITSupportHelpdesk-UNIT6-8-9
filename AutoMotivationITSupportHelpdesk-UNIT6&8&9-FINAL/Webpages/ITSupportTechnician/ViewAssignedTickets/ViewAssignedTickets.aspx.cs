@@ -36,6 +36,9 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
             ITSupportTicketID.ITSupportTicketComments = tbx_comments.Text;
             helpdeskDatabase.SaveChanges();
             gv_Your_Assigned_Tickets.DataBind();
+
+            string alertmessage = "alert('Comments Added Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
         }
         protected void deleteTicket()
         {
@@ -44,6 +47,9 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.ITSupportTech
             helpdeskDatabase.ITSupportTickets.Remove(ITSupportTicketID);
             helpdeskDatabase.SaveChanges();
             gv_Your_Assigned_Tickets.DataBind();
+
+            string alertmessage = "alert('Ticket Deleted Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
         }
     }
 }

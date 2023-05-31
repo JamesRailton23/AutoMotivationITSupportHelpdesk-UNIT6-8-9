@@ -41,6 +41,11 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             tbx_Password.Enabled = false;
             tbx_Phone_Number.Enabled = false;
             btn_Submit_General_Employee_Account.Enabled = false;
+
+            string alertmessage = "alert('New General Employee Account Created Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
+
+
         }
     }
 }

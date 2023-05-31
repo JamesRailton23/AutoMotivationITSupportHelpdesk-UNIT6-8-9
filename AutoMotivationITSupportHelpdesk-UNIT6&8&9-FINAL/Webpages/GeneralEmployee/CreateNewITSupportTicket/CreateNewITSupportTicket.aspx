@@ -15,7 +15,7 @@
         <div class="container-lg my-5 rounded shadow" style="font-family: 'IBM Plex Sans', sans-serif; background-color: #d3d3d3">
             <div class="p-3 p-lg-4">
                 <div class="row align-content-center justify-content-center text-center text-center bg-dark text-white p-4 mb-2 rounded">
-                    <h1 class="display-4">Submit Ticket</h1>
+                    <h1 class="display-4">Create New Ticket</h1>
                 </div>
                 <div class="row text-center align-content-center justify-content-center">
                     <div class="card text-center my-2" style="width: 50rem;">
@@ -28,11 +28,8 @@
                     <div class="card text-center my-2" style="width: 50rem;">
                         <div class="card-body">
                             <h5 class="card-title text-decoration-underline fw-bold">Category of issue</h5>
-                            <p>please Select the category of the issue that you are having</p>
-                            <asp:DropDownList ID="ddl_Category" runat="server">
-                                <asp:ListItem>Hardware</asp:ListItem>
-                                <asp:ListItem>Software</asp:ListItem>
-                            </asp:DropDownList>
+                            <p>please state the category of the issue that you are having</p>
+                            <asp:TextBox ID="tbx_Issue_Category" runat="server" CssClass="form-control form-control-lg" />
                         </div>
                     </div>
                     <div class="card text-center my-2" style="width: 50rem;">

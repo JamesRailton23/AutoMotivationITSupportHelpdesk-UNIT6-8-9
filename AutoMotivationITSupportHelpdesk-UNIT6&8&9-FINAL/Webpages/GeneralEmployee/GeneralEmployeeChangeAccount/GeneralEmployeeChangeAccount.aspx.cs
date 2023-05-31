@@ -35,6 +35,9 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
            tbx_Username.Enabled = false;
            btn_Change_Employee_Account_Details.Enabled = false;
 
+           string alertmessage = "alert('General Employee Account Details Changed Successfully!');";
+           ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
+
 
         }
     }

@@ -31,6 +31,8 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Delet
             helpdeskDatabase.ITSupportTechnicianAccounts.Remove(ITSupportTechnician);
             helpdeskDatabase.SaveChanges();
             gv_ITSupport_Technicians_Account.DataBind();
+            string alertmessage = "alert('IT Support Technician Account Deleted Successfully!');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
         }
     }
 }
