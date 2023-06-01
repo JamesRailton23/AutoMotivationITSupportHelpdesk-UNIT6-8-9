@@ -48,5 +48,10 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.Manager.Creat
 
 
         }
+
+        protected void btn_Back_To_Portal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Webpages/Manager/ManagerPortal/ManagerPortal.aspx");
+        }
     }
 }

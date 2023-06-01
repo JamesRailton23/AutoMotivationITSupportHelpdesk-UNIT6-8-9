@@ -52,6 +52,9 @@
                 <div class="row justify-content-center align-items-center">
                     <asp:Button ID="btn_Submit_General_Employee_Account" runat="server" Text="CREATE ACCOUNT" CssClass="btn btn-success btn-lg my-5" Width="550" Height="60" OnClick="btn_Submit_General_Employee_Account_Click"/>
                 </div>
+                <div class="row justify-content-center align-items-center">
+                <asp:Button ID="btn_Back_To_Home" runat="server" Text="RETURN HOME" CssClass="btn btn-primary btn-lg my-5" Width="550" Height="60" OnClick="btn_Back_To_Home_Click"/>
+                    </div>
             </div>
         </div>
     </form>

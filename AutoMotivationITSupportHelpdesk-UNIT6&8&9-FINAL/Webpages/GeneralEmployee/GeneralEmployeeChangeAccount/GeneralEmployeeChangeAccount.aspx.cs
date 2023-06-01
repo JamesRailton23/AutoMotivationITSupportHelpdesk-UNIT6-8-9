@@ -40,5 +40,10 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
 
 
         }
+
+        protected void btn_Back_To_Portal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Webpages/GeneralEmployee/GeneralEmployeePortal/GeneralEmployeePortal.aspx");
+        }
     }
 }

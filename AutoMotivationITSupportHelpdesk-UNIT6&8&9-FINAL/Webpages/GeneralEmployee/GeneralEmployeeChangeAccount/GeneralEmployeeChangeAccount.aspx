@@ -75,6 +75,9 @@
                 <div class="row justify-content-center align-items-center">
                     <asp:Button ID="btn_Change_Employee_Account_Details" runat="server" Text="UPDATE DETAILS" CssClass="btn btn-success btn-lg my-5" Width="550" Height="60" OnClick="btn_Change_Employee_Account_Details_Click"/>
                 </div>
+                <div class="row justify-content-center align-items-center">
+                    <asp:Button ID="btn_Back_To_Portal" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-success btn-lg my-5" Width="550" Height="60" OnClick="btn_Back_To_Portal_Click"/>
+                </div>
             </div>
         </div>
     </form>

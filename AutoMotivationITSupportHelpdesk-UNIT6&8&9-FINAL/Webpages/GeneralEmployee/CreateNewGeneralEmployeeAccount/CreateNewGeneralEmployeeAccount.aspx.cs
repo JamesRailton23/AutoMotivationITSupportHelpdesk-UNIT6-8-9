@@ -47,5 +47,10 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
 
 
         }
+
+        protected void btn_Back_To_Home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Webpages/Default/Default.aspx");
+        }
     }
 }

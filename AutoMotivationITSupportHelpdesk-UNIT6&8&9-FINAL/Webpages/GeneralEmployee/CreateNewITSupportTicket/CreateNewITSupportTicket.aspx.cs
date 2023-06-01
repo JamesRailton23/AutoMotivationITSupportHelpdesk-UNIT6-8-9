@@ -61,5 +61,10 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             var message = MessageResource.Create(messageOptions);
             Console.WriteLine(message.Body);
         }
+
+        protected void btn_Return_To_Portal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Webpages/GeneralEmployee/GeneralEmployeePortal/GeneralEmployeePortal.aspx");
+        }
     }
 }

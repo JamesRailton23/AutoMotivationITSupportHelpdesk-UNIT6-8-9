@@ -26,6 +26,9 @@
             <div class="row justify-content-center align-items-center">
                 <asp:Button ID="btn_Account_Login" runat="server" Text="LOGIN" CssClass="btn btn-success btn-lg" Width="550" Height="60" OnClick="btn_Account_Login_Click" />
             </div>
+            <div class="row justify-content-center align-items-center mt-5">
+                <asp:Button ID="btn_Return_To_Home" runat="server" Text="RETURN TO HOME" CssClass="btn btn-primary btn-lg" Width="550" Height="60" OnClick="btn_Return_To_Home_Click"/>
+            </div>
         </div>
     </div>
 </form>

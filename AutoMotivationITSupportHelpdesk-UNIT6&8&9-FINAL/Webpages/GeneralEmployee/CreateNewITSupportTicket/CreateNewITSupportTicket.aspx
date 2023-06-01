@@ -65,6 +65,11 @@
                         <asp:Button ID="btn_Submit_Support_Ticket" runat="server" Text="SUBMIT TICKET" CssClass="btn btn-success" Width="300px" Height="100px" OnClick="btn_Submit_Support_Ticket_Click"/>
                     </div>
                 </div>
+                 <div class="row text-center align-content-center justify-content-center bg-dark p-5 mt-5 rounded">
+                    <div class="col text-white text-decoration-underline fw-bold">
+                        <asp:Button ID="btn_Return_To_Portal" runat="server" Text="RETURN TO PORTAL" CssClass="btn btn-primary" Width="300px" Height="50px" OnClick="btn_Return_To_Portal_Click"/>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
