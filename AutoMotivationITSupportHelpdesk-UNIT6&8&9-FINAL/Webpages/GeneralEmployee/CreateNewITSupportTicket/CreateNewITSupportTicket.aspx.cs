@@ -43,7 +43,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             
             string alertmessage = "alert('New IT Support Ticket Created Successfully!');";
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
-           // twilliomessage();
+            twilliomessage();
             
         }
 
@@ -52,16 +52,12 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             var accountSid = "";
             var authToken = "";
             string username = Session["GeneralEmployeeUsername"].ToString();
-            
+            string phonenumber = Session["GeneralEmployeePhoneNumber"].ToString();
             
             TwilioClient.Init(accountSid, authToken);
-
-            var messageOptions = new CreateMessageOptions(
-              new PhoneNumber("+447922617611"));
+            var messageOptions = new CreateMessageOptions(new PhoneNumber(phonenumber));
             messageOptions.From = new PhoneNumber("+16206088321");
             messageOptions.Body = $"HI {username}! Thank you for submitting a support ticket to our IT support technicians. The department has received your support ticket and a technician will be assigned to the ticket shortly, we kindly ask you to please be patient while we work on your ticket. Many thanks AutoMotivation IT Department";
-
-
             var message = MessageResource.Create(messageOptions);
             Console.WriteLine(message.Body);
         }
