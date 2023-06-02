@@ -43,7 +43,7 @@ namespace AutoMotivationITSupportHelpdesk_UNIT6_8_9_FINAL.Webpages.GeneralEmploy
             
             string alertmessage = "alert('New IT Support Ticket Created Successfully!');";
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", alertmessage, true);
-            twilliomessage();
+            //twilliomessage();
             
         }
 
